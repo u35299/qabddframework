@@ -103,6 +103,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Validate fileds in Company Hompage.feature</DependentUpon>
     </Compile>
+    <Compile Include="Forms\Salesforcehomepage.cs" />
     <Compile Include="Forms\Talentsearchpage.cs" />
     <Compile Include="Forms\commonfunctions.cs" />
     <Compile Include="Forms\Loginpage.cs" />

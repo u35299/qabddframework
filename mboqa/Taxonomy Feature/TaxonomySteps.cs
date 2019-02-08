@@ -80,9 +80,9 @@ namespace mboqa
             try
             {
 
-                List<IWebElement> PredectiveText = driver.FindElements(By.CssSelector("mat-option.mat-option.ng-star-inserted")).ToList();                
+                //List<IWebElement> PredectiveText = driver.FindElements(By.CssSelector("mat-option.mat-option.ng-star-inserted")).ToList();                
                 
-                Assert.AreEqual(0, PredectiveText.Count);
+                Assert.AreEqual(0, Notespage.PredectiveText.Count);
             }
             catch (Exception ex)
             {
@@ -98,11 +98,11 @@ namespace mboqa
             {
                 wait.Until(ExpectedConditions.ElementIsVisible(By.Id("opportunityListScrollWrapper")));
 
-                List<IWebElement> OpportunityList = driver.FindElements(By.CssSelector("#opportunityListScrollWrapper > div")).ToList();
+                //List<IWebElement> OpportunityList = driver.FindElements(By.CssSelector("#opportunityListScrollWrapper > div")).ToList();
 
-                IWebElement EditButtonofFirstOpportunity = OpportunityList.FirstOrDefault().FindElements(By.TagName("Button")).Where(x => x.Text == "Edit").FirstOrDefault();
+                //IWebElement EditButtonofFirstOpportunity = OpportunityList.FirstOrDefault().FindElements(By.TagName("Button")).Where(x => x.Text == "Edit").FirstOrDefault();
 
-                EditButtonofFirstOpportunity.Click();
+                Opportunitiespage.EditButtonofFirstOpportunity.Click();
             }
             catch (Exception ex)
             {
@@ -116,13 +116,14 @@ namespace mboqa
         {
             try
             {
+                // my profile from my account
                 wait.Until(ExpectedConditions.ElementIsVisible(By.Id("myAccountLink")));
-                List<IWebElement> MyAccount = driver.FindElements(By.Id("myAccountLink")).ToList();
-                MyAccount.FirstOrDefault().Click();
+                //List<IWebElement> MyAccount = driver.FindElements(By.Id("myAccountLink")).ToList();
+                Opportunitiespage.MyAccount.FirstOrDefault().Click();
 
                 wait.Until(ExpectedConditions.ElementIsVisible(By.Id("profileLink")));
-                List<IWebElement> MyProfile = driver.FindElements(By.Id("profileLink")).ToList();
-                MyProfile.FirstOrDefault().Click();
+                //List<IWebElement> MyProfile = driver.FindElements(By.Id("profileLink")).ToList();
+                Opportunitiespage.MyProfile.FirstOrDefault().Click();
             }
             catch (Exception ex)
             {
@@ -138,12 +139,12 @@ namespace mboqa
             {
                 wait.Until(ExpectedConditions.ElementIsVisible(By.Id("profile-skills-form-edit-button")));
 
-                List<IWebElement> EditSkill = driver.FindElements(By.Id("profile-skills-form-edit-button")).ToList();
+                //List<IWebElement> EditSkill = driver.FindElements(By.Id("profile-skills-form-edit-button")).ToList();
 
                 Actions actions = new Actions(driver);
                 actions.MoveToElement(driver.FindElement(By.Id("profile-education-form-edit-button"))).Perform();
 
-                EditSkill.FirstOrDefault().Click();
+                Profilepage.EditSkill.FirstOrDefault().Click();
             }
             catch (Exception ex)
             {
@@ -158,8 +159,8 @@ namespace mboqa
             try
             {
                 wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#mat-chip-list-0 > div > mat-form-field > div > div.mat-form-field-flex > div > input")));
-                List<IWebElement> SkillTextBox = driver.FindElements(By.CssSelector("#mat-chip-list-0 > div > mat-form-field > div > div.mat-form-field-flex > div > input")).ToList();
-                SkillTextBox.FirstOrDefault().SendKeys(table.Rows[0]["skills"]);
+                //List<IWebElement> SkillTextBox = driver.FindElements(By.CssSelector("#mat-chip-list-0 > div > mat-form-field > div > div.mat-form-field-flex > div > input")).ToList();
+                Profilepage.SkillTextBox.FirstOrDefault().SendKeys(table.Rows[0]["skills"]);
             }
             catch (Exception ex)
             {
@@ -174,8 +175,8 @@ namespace mboqa
             try
             {
                 wait.Until(ExpectedConditions.ElementIsVisible(By.Id("profile-skills-form-save-button")));
-                List<IWebElement> SaveSkill = driver.FindElements(By.Id("profile-skills-form-save-button")).ToList();
-                SaveSkill.FirstOrDefault().Click();
+                //List<IWebElement> SaveSkill = driver.FindElements(By.Id("profile-skills-form-save-button")).ToList();
+                Profilepage.SaveSkill.FirstOrDefault().Click();
             }
             catch (Exception ex)
             {
@@ -189,10 +190,10 @@ namespace mboqa
         public void ThenExistingSkillsShouldStillBeVisible()
         {
             try
-            {
-                List<IWebElement> SkillSet = driver.FindElements(By.CssSelector("#profile-skills-chip > mat-chip-list > div >mbo-chip")).ToList();
+            {                
+                //List<IWebElement> SkillSet = driver.FindElements(By.CssSelector("#profile-skills-chip > mat-chip-list > div >mbo-chip")).ToList();
 
-                Assert.IsTrue(SkillSet.Any(x => x.Text != "java"));
+                Assert.IsTrue(Profilepage.SkillSet.Any(x => x.Text != "java"));
             }
             catch (Exception ex)
             {
@@ -206,9 +207,9 @@ namespace mboqa
         {
             try
             {
-                List<IWebElement> SkillSet = driver.FindElements(By.CssSelector("#profile-skills-chip > mat-chip-list > div >mbo-chip")).ToList();
+                //List<IWebElement> SkillSet = driver.FindElements(By.CssSelector("#profile-skills-chip > mat-chip-list > div >mbo-chip")).ToList();
 
-                Assert.IsTrue(SkillSet.Any(x => x.Text == "java"));
+                Assert.IsTrue(Profilepage.SkillSet.Any(x => x.Text == "java"));
             }
             catch (Exception ex)
             {

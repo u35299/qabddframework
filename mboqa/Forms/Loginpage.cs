@@ -35,6 +35,11 @@ namespace mboqa
         {
             get { return driver.FindElement(By.Id("loginButton")); }
         }
+
+        public static IWebElement Login_Box
+        {
+            get { return driver.FindElement(By.XPath("//div[@class='signup-form-white']")); }
+        }        
     }
     
 }

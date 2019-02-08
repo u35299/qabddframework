@@ -50,5 +50,25 @@ namespace mboqa
             get { return driver.FindElements(By.Id("createOpportunityLink")).ToList(); }
         }
 
+        public static List<IWebElement> OpportunityList
+        {
+            get { return driver.FindElements(By.CssSelector("#opportunityListScrollWrapper > div")).ToList(); }
+        }
+
+        public static IWebElement EditButtonofFirstOpportunity
+        {
+            get { return OpportunityList.FirstOrDefault().FindElements(By.TagName("Button")).Where(x => x.Text == "Edit").FirstOrDefault(); }
+        }
+
+        public static List<IWebElement> MyAccount
+        {
+            get { return driver.FindElements(By.Id("myAccountLink")).ToList(); }
+        }
+
+        public static List<IWebElement> MyProfile
+        {
+            get { return driver.FindElements(By.Id("profileLink")).ToList(); }
+        }
+
     }
 }

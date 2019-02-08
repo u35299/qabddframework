@@ -40,8 +40,23 @@ namespace mboqa
             get { return driver.FindElements(By.CssSelector("mat-hint.mat-hint.ng-star-inserted")).ToList(); }
         }
 
+        public static List<IWebElement> EditSkill
+        {
+            get { return driver.FindElements(By.Id("profile-skills-form-edit-button")).ToList(); }
+        }
+
+        public static List<IWebElement> SkillTextBox
+        {
+            get { return driver.FindElements(By.CssSelector("#mat-chip-list-0 > div > mat-form-field > div > div.mat-form-field-flex > div > input")).ToList(); }
+        }
+        public static List<IWebElement> SaveSkill
+        {
+            get { return driver.FindElements(By.Id("profile-skills-form-save-button")).ToList(); }
+        }
+        public static List<IWebElement> SkillSet
+        {
+            get { return driver.FindElements(By.CssSelector("#profile-skills-chip > mat-chip-list > div >mbo-chip")).ToList(); }
+        }
         
-
-
     }
 }

@@ -40,6 +40,7 @@ namespace mboqa
             get { return driver.FindElements(By.CssSelector("mat-option.mat-option.ng-star-inserted")).ToList(); }
         }
 
+
         public static List<IWebElement> NotesList
         {
             get { return driver.FindElements(By.CssSelector("mat-card.profile-note.mat-card.ng-star-inserted")).ToList(); }
