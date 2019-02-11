@@ -51,7 +51,7 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
                 
                 driver.Navigate().GoToUrl("https://connect-qa.mbopartners.com");
                 //driver.Navigate().GoToUrl("http://localhost:4200");
-
+                Thread.Sleep(5000);
                 objcommonfunctions.waituntillElementExist("Id", "username");
             }
             catch (Exception ex)
@@ -63,6 +63,28 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
 
         [When(@"I login to the application as an Advisor with the following credentials")]
         public void WhenILoginToTheApplicationAsAnAdvisorWithTheFollowingCredentials(Table table)
+        {
+            try
+            {
+                objcommonfunctions.waituntillElementExist("Id", "username");
+
+                Loginpage.loginUsername.Clear();
+                Loginpage.loginPassword.Clear();
+
+                Loginpage.loginUsername.SendKeys(table.Rows[0]["Username"]);
+                Loginpage.loginPassword.SendKeys(table.Rows[0]["Password"]);
+
+                Loginpage.loginbtnSubmit.Click();
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+
+        }
+
+        [When(@"I login to the application as an IC with the following credentials")]
+        public void WhenILoginToTheApplicationAsAnICWithTheFollowingCredentials(Table table)
         {
             try
             {

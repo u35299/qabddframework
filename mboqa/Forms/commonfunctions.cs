@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -12,8 +13,8 @@ namespace mboqa
     public class commonfunctions
     {
         WebDriverWait wait;
-        private readonly IWebDriver driver;
-
+        private static IWebDriver driver;
+       
         public commonfunctions()
         {
             driver = ScenarioContext.Current.Get<IWebDriver>("currentDriver");
@@ -71,5 +72,27 @@ namespace mboqa
                 }
             }
         }
+
+        public static void ScrollPageUp(int x, int y)
+        {
+
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.scrollBy(x,y)");
+
+
+        }
+
+        public static void ScrollPageDown(int x, int y)
+        {
+
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.scrollBy(0,1000)");
+
+
+        }
+
+
+
     }
+
 }

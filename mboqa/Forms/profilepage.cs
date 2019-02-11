@@ -57,6 +57,18 @@ namespace mboqa
         {
             get { return driver.FindElements(By.CssSelector("#profile-skills-chip > mat-chip-list > div >mbo-chip")).ToList(); }
         }
-        
+
+        public static IWebElement NewRegistration_SkillsSection
+        {
+            get { return driver.FindElement(By.CssSelector("#registration-skill > div > mat-form-field > div > div.mat-form-field-flex > div > mbo-chip-list")); }
+        }
+
+        public static IWebElement btn_ChooseFiles
+        {
+            get { return driver.FindElement(By.XPath("//*[@id='registration - skill']/div/mat-form-field/div/div[1]/div/mbo-chip")); }
+        }
+
+
+
     }
 }

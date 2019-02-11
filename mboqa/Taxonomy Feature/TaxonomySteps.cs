@@ -140,10 +140,9 @@ namespace mboqa
                 wait.Until(ExpectedConditions.ElementIsVisible(By.Id("profile-skills-form-edit-button")));
 
                 //List<IWebElement> EditSkill = driver.FindElements(By.Id("profile-skills-form-edit-button")).ToList();
-
+                //commonfunctions.ScrollPageDown(0,1000);
                 Actions actions = new Actions(driver);
                 actions.MoveToElement(driver.FindElement(By.Id("profile-education-form-edit-button"))).Perform();
-
                 Profilepage.EditSkill.FirstOrDefault().Click();
             }
             catch (Exception ex)
@@ -193,7 +192,7 @@ namespace mboqa
             {                
                 //List<IWebElement> SkillSet = driver.FindElements(By.CssSelector("#profile-skills-chip > mat-chip-list > div >mbo-chip")).ToList();
 
-                Assert.IsTrue(Profilepage.SkillSet.Any(x => x.Text != "java"));
+                Assert.IsTrue(Profilepage.SkillSet.Any(x => x.Text != "JAVA"));
             }
             catch (Exception ex)
             {
@@ -209,13 +208,23 @@ namespace mboqa
             {
                 //List<IWebElement> SkillSet = driver.FindElements(By.CssSelector("#profile-skills-chip > mat-chip-list > div >mbo-chip")).ToList();
 
-                Assert.IsTrue(Profilepage.SkillSet.Any(x => x.Text == "java"));
+                Assert.IsTrue(Profilepage.SkillSet.Any(x => x.Text == "JAVA"));
             }
             catch (Exception ex)
             {
                 throw new System.Exception(ex.Message);
             }
 
+        }
+
+        [When(@"I Clicked in Skills Section\.")]
+        public void WhenIClickedInSkillsSection_()
+        {
+            Thread.Sleep(3000);
+            commonfunctions.ScrollPageUp(0,-700);
+            wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#registration-skill > div > mat-form-field > div > div.mat-form-field-flex > div > mbo-chip-list")));
+            Thread.Sleep(3000);
+            Profilepage.NewRegistration_SkillsSection.Click();
         }
 
 
