@@ -43,7 +43,7 @@ namespace mboqa.Company_Homepage_Feature
             salesforcehomepage = new Salesforcehomepage(driver);
         }
 
-        [When(@"I Navigate to the Salesforce Homepage")]
+        [Given(@"I Navigate to the Salesforce Homepage")]
         public void WhenINavigateToTheSalesforceHomepage()
         {
             //driver.Navigate().GoToUrl("http://localhost:4200/client/salesforce");

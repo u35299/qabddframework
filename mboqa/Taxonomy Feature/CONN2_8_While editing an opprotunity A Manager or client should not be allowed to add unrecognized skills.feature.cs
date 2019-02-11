@@ -25,7 +25,7 @@ namespace mboqa.TaxonomyFeature
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-#line 1 "While editing an opprotunity A Manager or client should not be allowed to add unrecognized skills.feature"
+#line 1 "CONN2_8_While editing an opprotunity A Manager or client should not be allowed to add unrecognized skills.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -88,14 +88,14 @@ namespace mboqa.TaxonomyFeature
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("While editing an opprotunity A Manager or client should not be allowed to add unr" +
-            "ecognized skills")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("CONN2_8_While editing an opprotunity A Manager or client should not be allowed to" +
+            " add unrecognized skills")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Error messaging when unrecognized skills are entered As manager/client")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("taxonomy")]
-        public virtual void WhileEditingAnOpprotunityAManagerOrClientShouldNotBeAllowedToAddUnrecognizedSkills()
+        public virtual void CONN2_8_WhileEditingAnOpprotunityAManagerOrClientShouldNotBeAllowedToAddUnrecognizedSkills()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("While editing an opprotunity A Manager or client should not be allowed to add unr" +
-                    "ecognized skills", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CONN2_8_While editing an opprotunity A Manager or client should not be allowed to" +
+                    " add unrecognized skills", null, new string[] {
                         "taxonomy"});
 #line 4
 this.ScenarioInitialize(scenarioInfo);

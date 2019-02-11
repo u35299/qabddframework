@@ -128,20 +128,20 @@
       <DependentUpon>Advisor accessing Salesforce fields within Connect by View All Talent option.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Taxonomy Feature\Preserve unrecognized historical skills.feature.cs">
+    <Compile Include="Taxonomy Feature\CONN2_7_Preserve unrecognized historical skills.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Preserve unrecognized historical skills.feature</DependentUpon>
+      <DependentUpon>CONN2_7_Preserve unrecognized historical skills.feature</DependentUpon>
     </Compile>
-    <Compile Include="Taxonomy Feature\Error messaging when unrecognized skills are entered As manager or client.feature.cs">
+    <Compile Include="Taxonomy Feature\CONN2_8_Error messaging when unrecognized skills are entered As manager or client.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Error messaging when unrecognized skills are entered As manager or client.feature</DependentUpon>
+      <DependentUpon>CONN2_8_Error messaging when unrecognized skills are entered As manager or client.feature</DependentUpon>
     </Compile>
-    <Compile Include="Taxonomy Feature\While editing an opprotunity A Manager or client should not be allowed to add unrecognized skills.feature.cs">
+    <Compile Include="Taxonomy Feature\CONN2_8_While editing an opprotunity A Manager or client should not be allowed to add unrecognized skills.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>While editing an opprotunity A Manager or client should not be allowed to add unrecognized skills.feature</DependentUpon>
+      <DependentUpon>CONN2_8_While editing an opprotunity A Manager or client should not be allowed to add unrecognized skills.feature</DependentUpon>
     </Compile>
     <Compile Include="Taxonomy Feature\TaxonomySteps.cs" />
   </ItemGroup>
@@ -168,17 +168,17 @@
       <LastGenOutput>Advisor accessing Salesforce fields within Connect by View All Talent option.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
-    <None Include="Taxonomy Feature\Preserve unrecognized historical skills.feature">
+    <None Include="Taxonomy Feature\CONN2_7_Preserve unrecognized historical skills.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Preserve unrecognized historical skills.feature.cs</LastGenOutput>
+      <LastGenOutput>CONN2_7_Preserve unrecognized historical skills.feature.cs</LastGenOutput>
     </None>
-    <None Include="Taxonomy Feature\Error messaging when unrecognized skills are entered As manager or client.feature">
+    <None Include="Taxonomy Feature\CONN2_8_Error messaging when unrecognized skills are entered As manager or client.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Error messaging when unrecognized skills are entered As manager or client.feature.cs</LastGenOutput>
+      <LastGenOutput>CONN2_8_Error messaging when unrecognized skills are entered As manager or client.feature.cs</LastGenOutput>
     </None>
-    <None Include="Taxonomy Feature\While editing an opprotunity A Manager or client should not be allowed to add unrecognized skills.feature">
+    <None Include="Taxonomy Feature\CONN2_8_While editing an opprotunity A Manager or client should not be allowed to add unrecognized skills.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>While editing an opprotunity A Manager or client should not be allowed to add unrecognized skills.feature.cs</LastGenOutput>
+      <LastGenOutput>CONN2_8_While editing an opprotunity A Manager or client should not be allowed to add unrecognized skills.feature.cs</LastGenOutput>
     </None>
   </ItemGroup>
   <ItemGroup>
