@@ -25,7 +25,7 @@ namespace mboqa.TaxonomyFeature
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-#line 1 "Error messaging when unrecognized skills are entered As manager or client.feature"
+#line 1 "CONN2_8_Error messaging when unrecognized skills are entered As manager or client.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -88,14 +88,14 @@ namespace mboqa.TaxonomyFeature
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("While creating an opprotunity A Manager/client should not be allowed to add unrec" +
-            "ognized skills")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("CONN2_8_While creating an opprotunity A Manager/client should not be allowed to a" +
+            "dd unrecognized skills")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Error messaging when unrecognized skills are entered As manager or client")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("taxonomy")]
-        public virtual void WhileCreatingAnOpprotunityAManagerClientShouldNotBeAllowedToAddUnrecognizedSkills()
+        public virtual void CONN2_8_WhileCreatingAnOpprotunityAManagerClientShouldNotBeAllowedToAddUnrecognizedSkills()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("While creating an opprotunity A Manager/client should not be allowed to add unrec" +
-                    "ognized skills", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CONN2_8_While creating an opprotunity A Manager/client should not be allowed to a" +
+                    "dd unrecognized skills", null, new string[] {
                         "taxonomy"});
 #line 4
 this.ScenarioInitialize(scenarioInfo);

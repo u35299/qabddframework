@@ -26,6 +26,7 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
         Opportunitiespage opportunitiespage;
         Profilepage profilepage;
         Talentsearchpage talentsearchpage;
+        Salesforcehomepage salesforcehomepage;
 
         public NotesSteps()
         {
@@ -47,6 +48,7 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
         {
             try
             {
+                
                 driver.Navigate().GoToUrl("https://connect-qa.mbopartners.com");
                 //driver.Navigate().GoToUrl("http://localhost:4200");
 

@@ -88,20 +88,20 @@ namespace mboqa.CompanyHomepageFeature
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Perform user signup in Company Homepage")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("CONN2_16_Signing up on own for a client network from Company Home Page")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Perform user signup in Company Homepage")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("homepage")]
-        public virtual void PerformUserSignupInCompanyHomepage()
+        public virtual void CONN2_16_SigningUpOnOwnForAClientNetworkFromCompanyHomePage()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Perform user signup in Company Homepage", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CONN2_16_Signing up on own for a client network from Company Home Page", null, new string[] {
                         "homepage"});
 #line 4
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
 #line 5
- testRunner.Given("Connect Application is loaded to login page in the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+ testRunner.Given("I Navigate to the Salesforce Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 6
- testRunner.When("I Navigate to the Salesforce Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.Then("I validate the presence of FirstName, LastName, Email-Address fields", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "FirstName",
@@ -112,7 +112,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Ketel",
                         "xyz@ust-global.com"});
 #line 7
- testRunner.And("I enter the following signup details with FirstName, LastName and EmailAddress", ((string)(null)), table1, "And ");
+ testRunner.When("I enter the following signup details with FirstName, LastName and EmailAddress", ((string)(null)), table1, "When ");
 #line 10
  testRunner.And("I click on Sign Up button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
