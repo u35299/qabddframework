@@ -110,10 +110,10 @@
     <Compile Include="Forms\Notespage.cs" />
     <Compile Include="Forms\Opportunitiespage.cs" />
     <Compile Include="Forms\Profilepage.cs" />
-    <Compile Include="Notes Feature\Advisor accessing Salesforce fields within Connect by ViewAll Talen option .feature.cs">
-      <AutoGen>True</AutoGen>
+    <Compile Include="Notes Feature\CONN2_21_Advisor accessing Salesforce fields within Connect by ViewAll Talen option .feature.cs">
+      <DependentUpon>CONN2_21_Advisor accessing Salesforce fields within Connect by ViewAll Talen option .feature</DependentUpon>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Advisor accessing Salesforce fields within Connect by ViewAll Talen option .feature</DependentUpon>
+      <AutoGen>True</AutoGen>
     </Compile>
     <Compile Include="Notes Feature\CONN2_22_Add Notes capability for advisors in Connect.feature.cs">
       <AutoGen>True</AutoGen>
@@ -122,12 +122,17 @@
     </Compile>
     <Compile Include="Helper\Environment.cs" />
     <Compile Include="Notes Feature\NotesSteps.cs" />
-    <Compile Include="Notes Feature\Advisor accessing Salesforce fields within Connect by View All Talent option.feature.cs">
+    <Compile Include="Notes Feature\CONN2_21_Advisor accessing Salesforce fields within Connect by View All Talent option.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>Advisor accessing Salesforce fields within Connect by View All Talent option.feature</DependentUpon>
+      <DependentUpon>CONN2_21_Advisor accessing Salesforce fields within Connect by View All Talent option.feature</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Taxonomy Feature\CONN2_4_Visual color coding for any unrecognized skill in the existing profile.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CONN2_4_Visual color coding for any unrecognized skill in the existing profile.feature</DependentUpon>
+    </Compile>
     <Compile Include="Taxonomy Feature\CONN2_7_Preserve unrecognized historical skills.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -155,19 +160,23 @@
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>Validate fileds in Company Hompage.feature.cs</LastGenOutput>
     </None>
-    <None Include="Notes Feature\Advisor accessing Salesforce fields within Connect by ViewAll Talen option .feature">
+    <None Include="Notes Feature\CONN2_21_Advisor accessing Salesforce fields within Connect by ViewAll Talen option .feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Advisor accessing Salesforce fields within Connect by ViewAll Talen option .feature.cs</LastGenOutput>
+      <LastGenOutput>CONN2_21_Advisor accessing Salesforce fields within Connect by ViewAll Talen option .feature.cs</LastGenOutput>
     </None>
     <None Include="Notes Feature\CONN2_22_Add Notes capability for advisors in Connect.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CONN2_22_Add Notes capability for advisors in Connect.feature.cs</LastGenOutput>
     </None>
-    <None Include="Notes Feature\Advisor accessing Salesforce fields within Connect by View All Talent option.feature">
+    <None Include="Notes Feature\CONN2_21_Advisor accessing Salesforce fields within Connect by View All Talent option.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
-      <LastGenOutput>Advisor accessing Salesforce fields within Connect by View All Talent option.feature.cs</LastGenOutput>
+      <LastGenOutput>CONN2_21_Advisor accessing Salesforce fields within Connect by View All Talent option.feature.cs</LastGenOutput>
     </None>
     <None Include="packages.config" />
+    <None Include="Taxonomy Feature\CONN2_4_Visual color coding for any unrecognized skill in the existing profile.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CONN2_4_Visual color coding for any unrecognized skill in the existing profile.feature.cs</LastGenOutput>
+    </None>
     <None Include="Taxonomy Feature\CONN2_7_Preserve unrecognized historical skills.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CONN2_7_Preserve unrecognized historical skills.feature.cs</LastGenOutput>

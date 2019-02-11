@@ -10,7 +10,7 @@
 // ------------------------------------------------------------------------------
 #region Designer generated code
 #pragma warning disable
-namespace mboqa.NotesFeature
+namespace mboqa.TaxonomyFeature
 {
     using TechTalk.SpecFlow;
     
@@ -18,14 +18,14 @@ namespace mboqa.NotesFeature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class AdvisorAccessingSalesforceFieldsWithinConnectByViewAllTalentOptionFeature
+    public partial class CONN2_4_VisualColorCodingForAnyUnrecognizedSkillInTheExistingProfileFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-#line 1 "Advisor accessing Salesforce fields within Connect by View All Talent option.feature"
+#line 1 "CONN2_4_Visual color coding for any unrecognized skill in the existing profile.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -44,7 +44,7 @@ namespace mboqa.NotesFeature
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Advisor accessing Salesforce fields within Connect by View All Talent option", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "CONN2_4_Visual color coding for any unrecognized skill in the existing profile", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -59,9 +59,9 @@ namespace mboqa.NotesFeature
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Advisor accessing Salesforce fields within Connect by View All Talent option")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "CONN2_4_Visual color coding for any unrecognized skill in the existing profile")))
             {
-                global::mboqa.NotesFeature.AdvisorAccessingSalesforceFieldsWithinConnectByViewAllTalentOptionFeature.FeatureSetup(null);
+                global::mboqa.TaxonomyFeature.CONN2_4_VisualColorCodingForAnyUnrecognizedSkillInTheExistingProfileFeature.FeatureSetup(null);
             }
         }
         
@@ -88,47 +88,33 @@ namespace mboqa.NotesFeature
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Advisor accessing Salesforce fields within Connect by View All Talent option")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Advisor accessing Salesforce fields within Connect by View All Talent option")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("notes")]
-        public virtual void AdvisorAccessingSalesforceFieldsWithinConnectByViewAllTalentOption()
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("CONN2_4_Visual color coding_IC updates his/her skills")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CONN2_4_Visual color coding for any unrecognized skill in the existing profile")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("taxonomy")]
+        public virtual void CONN2_4_VisualColorCoding_ICUpdatesHisHerSkills()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Advisor accessing Salesforce fields within Connect by View All Talent option", null, new string[] {
-                        "notes"});
-#line 5
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CONN2_4_Visual color coding_IC updates his/her skills", null, new string[] {
+                        "taxonomy"});
+#line 4
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 6
+#line 5
  testRunner.Given("Connect Application is loaded to login page in the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line hidden
             TechTalk.SpecFlow.Table table1 = new TechTalk.SpecFlow.Table(new string[] {
                         "Username",
                         "Password"});
             table1.AddRow(new string[] {
-                        "testmboconnect+hmceb@gmail.com",
+                        "anelson@mbo-tst.com",
                         "Mbo.2011"});
-#line 7
+#line 6
  testRunner.When("I login to the application as an Advisor with the following credentials", ((string)(null)), table1, "When ");
+#line 9
+ testRunner.And("I Click \"My Profile\" from \"My Account\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 10
- testRunner.And("I select the option \"Talent Search\" from the menu \"Talent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I Click on \"Edit\" button under skill", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
- testRunner.And("I click \"View All Talent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 12
- testRunner.And("From the list of profiles, I select one of the profiles and Click on the Name of " +
-                    "the talent to open the complete profile in a popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 13
- testRunner.And("I click on \"Add Message\" to enter a message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "Fields"});
-            table2.AddRow(new string[] {
-                        "Author"});
-            table2.AddRow(new string[] {
-                        "Date and Time"});
-            table2.AddRow(new string[] {
-                        "Message"});
-#line 14
- testRunner.Then("the notes window should be displayed with the following fields", ((string)(null)), table2, "Then ");
+ testRunner.Then("Any unrecognized skill will be color coded appropriately", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

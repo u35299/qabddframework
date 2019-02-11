@@ -32,7 +32,7 @@ namespace mboqa
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
             random = new Random();
             randomnumber = random.Next().ToString();            
-            objcommonfunctions = new commonfunctions();
+            objcommonfunctions = new commonfunctions(driver);
             loginpage = new Loginpage(driver);
             notespage = new Notespage(driver);
             opportunitiespage = new Opportunitiespage(driver);
@@ -150,8 +150,26 @@ namespace mboqa
             {
                 throw new System.Exception(ex.Message);
             }
-
         }
+
+        [Then(@"Any unrecognized skill will be color coded appropriately")]
+        public void ThenAnyUnrecognizedSkillWillBeColorCodedAppropriately()
+        {
+            try
+            {
+                //wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#profile-skills-chip>mat-chip-list>div>mbo-chip")));
+
+                int y= Profilepage.SkillSetinIcProfile.Count();
+
+                Assert.IsTrue(Profilepage.SkillSetinIcProfile.Any(x => x.FindElement(By.CssSelector("mat-chip.chip__list-item.chip-standard.chip-input.chip-with-icon.mat-chip.mat-standard-chip.legacy-skill.mat-none")).Displayed));
+            }
+
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
+
 
         [When(@"I enter following valid Skills in the textbox")]
         public void WhenIEnterFollowingValidSkillsInTheTextbox(Table table)

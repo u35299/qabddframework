@@ -35,7 +35,7 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
             random = new Random();
             randomnumber = random.Next().ToString();
-            objcommonfunctions = new commonfunctions();
+            objcommonfunctions = new commonfunctions(driver);
             loginpage = new Loginpage(driver);
             notespage = new Notespage(driver);
             opportunitiespage = new Opportunitiespage(driver);
@@ -48,7 +48,7 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
         {
             try
             {
-                
+
                 driver.Navigate().GoToUrl("https://connect-qa.mbopartners.com");
                 //driver.Navigate().GoToUrl("http://localhost:4200");
 
@@ -85,10 +85,10 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
 
         [When(@"I select the option ""(.*)"" from the menu ""(.*)""")]
         public void WhenISelectTheOptionFromTheMenu(string p0, string p1)
-        {           
+        {
             wait.Until(ExpectedConditions.ElementExists(By.Id("oppListSearchInput")));
-                
-            if (Opportunitiespage.HamburgerMenu.Count>0)
+
+            if (Opportunitiespage.HamburgerMenu.Count > 0)
             {
 
                 try
@@ -156,6 +156,18 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
 
         }
 
+        [When(@"I Click on the first profile from the the search result")]
+        public void WhenIClickOnTheFirstProfileFromTheTheSearchResult()
+        {
+            Opportunitiespage.OpportunitySearchResponseList.FirstOrDefault().Click();
+        }
+
+        [When(@"I provide the following name to search by name")]
+        public void WhenIProvideTheFollowingNameToSearchByName(Table table)
+        {
+            Opportunitiespage.OpportunitySearchByNameTextbox.SendKeys(table.Rows[0]["name"]);
+        }
+
         [When(@"I click on ""(.*)"" to enter a message")]
         public void WhenIClickOnToEnterAMessage(string p0)
         {
@@ -174,6 +186,20 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
             }
         }
 
+        [When(@"I click on ""(.*)"" from the profile page to enter a message")]
+        public void WhenIClickOnFromTheProfilePageToEnterAMessage(string p0)
+        {
+            try
+            {
+                Thread.Sleep(2000);
+                Profilepage.NotesBtnfromProfile.Click();
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
+
         [When(@"I enter the message in the message box")]
         public void WhenIEnterTheMessageInTheMessageBox()
         {
@@ -183,7 +209,7 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
                 wait.Until(ExpectedConditions.ElementExists(By.Id("profile-form-input-profile-note")));
 
                 Thread.Sleep(5000);
-                Notespage.NotesTextArea.SendKeys("This is a Sample Notes in the Talent Profile with unique number = "+randomnumber);
+                Notespage.NotesTextArea.SendKeys("This is a Sample Notes in the Talent Profile with unique number = " + randomnumber);
 
             }
             catch (Exception ex)
@@ -191,7 +217,6 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
                 throw new System.Exception(ex.Message);
             }
         }
-
 
         [When(@"I click on ""(.*)"" button to save the message")]
         public void WhenIClickOnButtonToSaveTheMessage(string p0)
@@ -211,7 +236,7 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
         {
             try
             {
-                Thread.Sleep(5000);
+                Thread.Sleep(8000);
                 Assert.IsTrue(Notespage.NotesSubmitedText[0].Text.Contains("This is a Sample Notes in the Talent Profile with unique number = " + randomnumber));
                 Thread.Sleep(5000);
             }
@@ -242,7 +267,7 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
         {
             try
             {
-                wait.Until(ExpectedConditions.ElementExists(By.CssSelector("#mat-chip-list-0 > div > mat-form-field > div > div.mat-form-field-flex > div > input")));                
+                wait.Until(ExpectedConditions.ElementExists(By.CssSelector("#mat-chip-list-0 > div > mat-form-field > div > div.mat-form-field-flex > div > input")));
 
                 Opportunitiespage.SkillsTextbox.FirstOrDefault().SendKeys(table.Rows[0]["skills"].ToString());
             }
@@ -256,7 +281,7 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
         public void WhenIClickButton(string p0)
         {
             try
-            {                
+            {
                 Talentsearchpage.FindTalentButton.FirstOrDefault().Click();
             }
             catch (Exception ex)
@@ -270,7 +295,7 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
         {
             try
             {
-                wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("mat-card.profile-note.mat-card.ng-star-inserted")));                
+                wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("mat-card.profile-note.mat-card.ng-star-inserted")));
 
                 foreach (IWebElement notes in Notespage.NotesList)
                 {
@@ -283,6 +308,21 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
             {
                 throw new System.Exception(ex.Message);
             }
-        }       
+        }
+
+        [When(@"I search for ""(.*)"" in the opportunity search bar")]
+        public void WhenISearchForInTheOpportunitySearchBar(string p0)
+        {
+            try
+            {
+                wait.Until(ExpectedConditions.ElementIsVisible(By.Id("oppListSearchInput")));
+                Opportunitiespage.OpportunitypageSearchbar.SendKeys(p0);
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+
+        }
     }
 }

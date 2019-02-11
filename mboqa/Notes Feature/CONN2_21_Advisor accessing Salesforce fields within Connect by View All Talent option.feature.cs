@@ -18,14 +18,14 @@ namespace mboqa.NotesFeature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class AdvisorAccessingSalesforceFieldsWithinConnectByViewAllTalenOptionFeature
+    public partial class AdvisorAccessingSalesforceFieldsWithinConnectByViewAllTalentOptionFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
         
         private Microsoft.VisualStudio.TestTools.UnitTesting.TestContext _testContext;
         
-#line 1 "Advisor accessing Salesforce fields within Connect by ViewAll Talen option .feature"
+#line 1 "CONN2_21_Advisor accessing Salesforce fields within Connect by View All Talent option.feature"
 #line hidden
         
         public virtual Microsoft.VisualStudio.TestTools.UnitTesting.TestContext TestContext
@@ -44,7 +44,7 @@ namespace mboqa.NotesFeature
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Advisor accessing Salesforce fields within Connect by ViewAll Talen option", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Advisor accessing Salesforce fields within Connect by View All Talent option", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -59,9 +59,9 @@ namespace mboqa.NotesFeature
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Advisor accessing Salesforce fields within Connect by ViewAll Talen option")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Advisor accessing Salesforce fields within Connect by View All Talent option")))
             {
-                global::mboqa.NotesFeature.AdvisorAccessingSalesforceFieldsWithinConnectByViewAllTalenOptionFeature.FeatureSetup(null);
+                global::mboqa.NotesFeature.AdvisorAccessingSalesforceFieldsWithinConnectByViewAllTalentOptionFeature.FeatureSetup(null);
             }
         }
         
@@ -88,12 +88,14 @@ namespace mboqa.NotesFeature
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Advisor accessing Salesforce fields within Connect by ViewAll Talent option")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Advisor accessing Salesforce fields within Connect by ViewAll Talen option")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("CONN2_21_Advisor accessing Salesforce fields within Connect by View All Talent op" +
+            "tion")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Advisor accessing Salesforce fields within Connect by View All Talent option")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("notes")]
-        public virtual void AdvisorAccessingSalesforceFieldsWithinConnectByViewAllTalentOption()
+        public virtual void CONN2_21_AdvisorAccessingSalesforceFieldsWithinConnectByViewAllTalentOption()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Advisor accessing Salesforce fields within Connect by ViewAll Talent option", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CONN2_21_Advisor accessing Salesforce fields within Connect by View All Talent op" +
+                    "tion", null, new string[] {
                         "notes"});
 #line 5
 this.ScenarioInitialize(scenarioInfo);
@@ -105,39 +107,27 @@ this.ScenarioInitialize(scenarioInfo);
                         "Username",
                         "Password"});
             table1.AddRow(new string[] {
-                        "testmboconnect+hmceb@gmail.com",
+                        "tberg@mbo-tst.com",
                         "Mbo.2011"});
 #line 7
  testRunner.When("I login to the application as an Advisor with the following credentials", ((string)(null)), table1, "When ");
 #line 10
- testRunner.And("I select the option \"Talent Search\" from the menu \"Talent\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I search for \"Senior DevOps EngineerII\" in the opportunity search bar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 11
+ testRunner.And("I Click on the first profile from the the search result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 12
+ testRunner.And("I click on \"Add Message\" from the profile page to enter a message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
-                        "skills"});
-            table2.AddRow(new string[] {
-                        "java"});
-#line 11
- testRunner.And("I provide the following skills in skill field to search", ((string)(null)), table2, "And ");
-#line 14
- testRunner.And("I select \"Java\" from the predective text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 15
- testRunner.And("I click \"FindTalent\" button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 16
- testRunner.And("From the list of profiles, I select one of the profiles and Click on the Name of " +
-                    "the talent to open the complete profile in a popup", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line 17
- testRunner.And("I click on \"Add Message\" to enter a message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
-#line hidden
-            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
                         "Fields"});
-            table3.AddRow(new string[] {
+            table2.AddRow(new string[] {
                         "Author"});
-            table3.AddRow(new string[] {
+            table2.AddRow(new string[] {
                         "Date and Time"});
-            table3.AddRow(new string[] {
+            table2.AddRow(new string[] {
                         "Message"});
-#line 18
- testRunner.Then("the notes window should be displayed with the following fields", ((string)(null)), table3, "Then ");
+#line 13
+ testRunner.Then("the notes window should be displayed with the following fields", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

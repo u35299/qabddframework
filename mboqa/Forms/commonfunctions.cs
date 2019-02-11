@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using OpenQA.Selenium.Support.UI;
 using System;
 using System.Collections.Generic;
@@ -14,9 +15,9 @@ namespace mboqa
         WebDriverWait wait;
         private readonly IWebDriver driver;
 
-        public commonfunctions()
+        public commonfunctions(IWebDriver _driver)
         {
-            driver = ScenarioContext.Current.Get<IWebDriver>("currentDriver");
+            driver = _driver;
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
         }
 
