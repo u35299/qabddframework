@@ -35,6 +35,11 @@ namespace mboqa
             get { return ProfilePopup.FindElement(By.Id("manage-notes-button")); }
         }
 
+        public static IWebElement NotesBtnfromProfile
+        {
+            get { return driver.FindElement(By.Id("manage-notes-button")); }
+        }
+
         public static List<IWebElement> TaxonomyErrorMsg
         {
             get { return driver.FindElements(By.CssSelector("mat-hint.mat-hint.ng-star-inserted")).ToList(); }
@@ -55,7 +60,11 @@ namespace mboqa
         }
         public static List<IWebElement> SkillSet
         {
-            get { return driver.FindElements(By.CssSelector("#profile-skills-chip > mat-chip-list > div >mbo-chip")).ToList(); }
+            get { return driver.FindElements(By.CssSelector("#profile-skills-chip>mat-chip-list>div>mbo-chip")).ToList(); }
+        }
+        public static List<IWebElement> SkillSetinIcProfile
+        {
+            get { return driver.FindElements(By.CssSelector("div.mat-form-field-infix>mbo-chip-list>mat-chip-list>div>mbo-chip")).ToList(); }
         }
 
         public static IWebElement NewRegistration_SkillsSection

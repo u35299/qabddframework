@@ -13,11 +13,11 @@ namespace mboqa
     public class commonfunctions
     {
         WebDriverWait wait;
-        private static IWebDriver driver;
-       
-        public commonfunctions()
+        private readonly IWebDriver driver;
+
+        public commonfunctions(IWebDriver _driver)
         {
-            driver = ScenarioContext.Current.Get<IWebDriver>("currentDriver");
+            driver = _driver;
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
         }
 

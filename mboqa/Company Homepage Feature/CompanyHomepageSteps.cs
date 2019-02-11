@@ -34,7 +34,7 @@ namespace mboqa.Company_Homepage_Feature
             wait = new WebDriverWait(driver, TimeSpan.FromSeconds(15));
             random = new Random();
             randomnumber = random.Next().ToString();
-            objcommonfunctions = new commonfunctions();
+            objcommonfunctions = new commonfunctions(driver);
             loginpage = new Loginpage(driver);
             notespage = new Notespage(driver);
             opportunitiespage = new Opportunitiespage(driver);

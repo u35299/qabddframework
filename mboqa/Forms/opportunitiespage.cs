@@ -70,5 +70,21 @@ namespace mboqa
             get { return driver.FindElements(By.Id("profileLink")).ToList(); }
         }
 
+        public static IWebElement OpportunitypageSearchbar
+        {
+            get { return driver.FindElement(By.Id("oppListSearchInput")); }
+        }
+
+        public static List<IWebElement> OpportunitySearchResponseList
+        {
+            get { return driver.FindElements(By.CssSelector("#opportunityResponsesScrollWrapper>opportunity-responses>mat-card>mat-card-content>div>respondent-card>mat-card>div>div:nth-child(1)>mat-card-header>div")).ToList(); }
+        }
+
+        public static IWebElement OpportunitySearchByNameTextbox
+        {
+            get { return driver.FindElement(By.Id("talent-search-basic-name-form-field")); }
+        }
+
+        
     }
 }

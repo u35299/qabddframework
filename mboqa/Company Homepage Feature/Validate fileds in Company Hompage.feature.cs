@@ -95,12 +95,12 @@ namespace mboqa.CompanyHomepageFeature
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CONN2_16_Validate fileds in Company Hompage", null, new string[] {
                         "smoke"});
-#line 6
+#line 4
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
-#line 7
+#line 5
  testRunner.Given("I Navigate to the Salesforce Homepage", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
-#line 8
+#line 6
  testRunner.Then("I validate the presence of FirstName, LastName, Email-Address fields", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

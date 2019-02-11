@@ -4,7 +4,7 @@
 Scenario: Associate updates his/her skills
 	Given Connect Application is loaded to login page in the browser
 	When I login to the application as an Advisor with the following credentials
-	| Username                       | Password |
+	| Username           | Password |
 	| agreen@mbo-tst.com | Mbo.2011 |
 	And I Click "My Profile" from "My Account"
 	And I Click on "Edit" button under skill
