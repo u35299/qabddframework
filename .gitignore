@@ -259,3 +259,5 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/mboqa/Taxonomy Feature/CONN2_2_TypeaheadcompletionofskillsbasedonnormalizedtaxonomyforNewlyregisteredIC.feature
+/mboqa/Taxonomy Feature/CONN2_2_TypeaheadcompletionofskillsbasedonnormalizedtaxonomyforNewlyregisteredIC.feature.cs

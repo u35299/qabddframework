@@ -72,5 +72,27 @@ namespace mboqa
                 }
             }
         }
+
+        public static void ScrollPageUp(int x, int y)
+        {
+
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.scrollBy(x,y)");
+
+
+        }
+
+        public static void ScrollPageDown(int x, int y)
+        {
+
+            IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
+            js.ExecuteScript("window.scrollBy(0,1000)");
+
+
+        }
+
+
+
     }
+
 }
