@@ -124,7 +124,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
  testRunner.And("I provide the following skills in skill field to search", ((string)(null)), table2, "And ");
 #line 13
- testRunner.And("I select \"JAVA\" from the predective text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I select \"Java\" from the predective text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 14
  testRunner.Then("the new skill should be saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
