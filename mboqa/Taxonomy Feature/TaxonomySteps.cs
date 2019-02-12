@@ -268,5 +268,38 @@ namespace mboqa
         }
 
 
+        [When(@"I provide the following Duplicate skills in skill field to search")]
+        public void WhenIProvideTheFollowingDuplicateSkillsInSkillFieldToSearch(Table table)
+        {
+            try
+            {
+                wait.Until(ExpectedConditions.ElementExists(By.CssSelector("#mat-chip-list-0 > div > mat-form-field > div > div.mat-form-field-flex > div > input")));
+
+                Opportunitiespage.SkillsTextbox.FirstOrDefault().SendKeys(table.Rows[0]["skills"].ToString());
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
+
+        [Then(@"Duplicate skill should not be saved")]
+        public void ThenDuplicateSkillShouldNotBeSaved()
+        {
+            try
+            {
+                String SkillName = Profilepage.addedSkill.Text;
+
+            Assert.AreEqual(SkillName, "Java");
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+
+        }
+
+
+
     }
 }

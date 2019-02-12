@@ -77,7 +77,17 @@ namespace mboqa
             get { return driver.FindElement(By.XPath("//*[@id='registration - skill']/div/mat-form-field/div/div[1]/div/mbo-chip")); }
         }
 
+        public static IWebElement addedSkill
+        {
+            get { return driver.FindElement(By.XPath("//*[@id='profile - skills - form - field - chip - 2']/span")); }
+            
+        }
 
+        public static IWebElement SkillChip
+        {
+            get { return driver.FindElement(By.XPath()); }
+
+        }
 
     }
 }

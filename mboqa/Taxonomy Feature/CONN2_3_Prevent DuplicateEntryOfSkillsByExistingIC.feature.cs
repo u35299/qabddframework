@@ -121,7 +121,13 @@ this.ScenarioInitialize(scenarioInfo);
             table2.AddRow(new string[] {
                         "JAVA"});
 #line 11
- testRunner.And("I provide the following skills in skill field to search", ((string)(null)), table2, "And ");
+ testRunner.When("I provide the following Duplicate skills in skill field to search", ((string)(null)), table2, "When ");
+#line 14
+   testRunner.And("I select \"Java\" from the predective text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 15
+   testRunner.And("I click the save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
+   testRunner.Then("Duplicate skill should not be saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }
