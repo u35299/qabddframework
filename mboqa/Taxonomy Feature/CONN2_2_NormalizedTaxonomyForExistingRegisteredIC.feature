@@ -10,7 +10,7 @@ Scenario: CONN2_2_Type ahead completion of skills based on normalized taxonomy f
 	And I Click on "Edit" button under skill
 	And I provide the following skills in skill field to search
          | skills |
-         | JAVA   |
+         | JAV   |
     And I select "JAVA" from the predective text
     Then the new skill should be saved
 	

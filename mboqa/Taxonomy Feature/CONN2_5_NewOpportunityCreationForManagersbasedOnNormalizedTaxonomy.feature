@@ -1,7 +1,7 @@
-﻿Feature: Creating an opprotunity A Manager/client should not be allowed to add the skills
+﻿Feature: Creating an opprotunity A Manager/client should be allowed to add the skills
 
 @taxonomy
-Scenario: CONN2_5_While creating an opprotunity A Manager/client should not be allowed to add the skills
+Scenario: CONN2_5_While creating an opprotunity A Manager/client should be allowed to add the skills
 	Given Connect Application is loaded to login page in the browser
 	When I login to the application as an Advisor with the following credentials
 	| Username                       | Password |
@@ -9,6 +9,6 @@ Scenario: CONN2_5_While creating an opprotunity A Manager/client should not be a
 	And I click "Create New Opportunity" menu
 	And I provide the following skills in skill field to search
          | skills |
-         | JAVA   |
-	And I select "java" from the predective text
+         | java 1.2  |
+	And I select "JAVA 1.2" from the predective text
 	Then the new skill should be saved
