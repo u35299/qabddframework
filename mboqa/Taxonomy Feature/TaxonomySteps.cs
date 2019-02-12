@@ -95,6 +95,13 @@ namespace mboqa
             Assert.AreEqual(1, Profilepage.SkillSetinIcProfile.Count);
         }
 
+        [Then(@"skill should not be duplicated with count ""(.*)""")]
+        public void ThenSkillShouldNotBeDuplicatedWithCount(string p0)
+        {
+            Assert.AreEqual(Convert.ToInt32(p0), Profilepage.SkillSetinIcProfile.Count);
+        }
+
+
 
         [Then(@"skill should not be saved")]
         public void ThenSkillShouldNotBeSaved()
@@ -257,6 +264,22 @@ namespace mboqa
             }
 
         }
+
+        [Then(@"the new skill ""(.*)"" should be saved")]
+        public void ThenTheNewSkillShouldBeSaved(string p0)
+        {
+            try
+            {
+                Thread.Sleep(3000);                
+
+                Assert.IsTrue(Opportunitiespage.OpportunitySkillList.Any(x => x.Text == p0));
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
+
 
         [When(@"I Clicked in Skills Section\.")]
         public void WhenIClickedInSkillsSection_()

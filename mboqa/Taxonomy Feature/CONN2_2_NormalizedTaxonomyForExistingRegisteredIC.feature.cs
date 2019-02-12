@@ -94,12 +94,12 @@ namespace mboqa.TaxonomyFeature
             " registered IC")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Type ahead completion of skills based on normalized taxonomy for Existing registe" +
             "redIC")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("mytag")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("Taxonomy")]
         public virtual void CONN2_2_TypeAheadCompletionOfSkillsBasedOnNormalizedTaxonomyForExistingRegisteredIC()
         {
             TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CONN2_2_Type ahead completion of skills based on normalized taxonomy for Existing" +
                     " registered IC", null, new string[] {
-                        "mytag"});
+                        "Taxonomy"});
 #line 4
 this.ScenarioInitialize(scenarioInfo);
             this.ScenarioStart();
@@ -122,7 +122,7 @@ this.ScenarioInitialize(scenarioInfo);
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "skills"});
             table2.AddRow(new string[] {
-                        "JAV"});
+                        "JAVA"});
 #line 11
  testRunner.And("I provide the following skills in skill field to search", ((string)(null)), table2, "And ");
 #line 14

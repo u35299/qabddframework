@@ -18,7 +18,7 @@ Scenario: CONN2_6_Prevent duplicate entry of skills in the New opportunity by Ma
 	Then skill should not be duplicated
 	
 	Scenario: CONN2_6_Manager should not be able to enter duplicate skills in the skills field for Existing opportunity creation
-	## will fail due to BUG-CONN2-313
+
 	Given Connect Application is loaded to login page in the browser
 	When I login to the application as an Advisor with the following credentials
 	| Username           | Password |
@@ -26,10 +26,10 @@ Scenario: CONN2_6_Prevent duplicate entry of skills in the New opportunity by Ma
 	And I click on Edit button one of the opportunity
 	And I provide the following skills in skill field to search
          | skills |
-         | java    |
+         | jav    |
 	And I select "Java Swing" from the predective text
 	And I provide the following skills in skill field to search
          | skills |
-         | javas    |
+         | jav   |
 	And I select "Java Swing" from the predective text
-	Then skill should not be duplicated
+	Then skill should not be duplicated with count "2"

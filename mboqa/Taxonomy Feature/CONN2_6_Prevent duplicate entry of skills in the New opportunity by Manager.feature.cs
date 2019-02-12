@@ -163,7 +163,7 @@ this.ScenarioInitialize(scenarioInfo);
             TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
                         "skills"});
             table5.AddRow(new string[] {
-                        "java"});
+                        "jav"});
 #line 27
  testRunner.And("I provide the following skills in skill field to search", ((string)(null)), table5, "And ");
 #line 30
@@ -172,13 +172,13 @@ this.ScenarioInitialize(scenarioInfo);
             TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
                         "skills"});
             table6.AddRow(new string[] {
-                        "javas"});
+                        "jav"});
 #line 31
  testRunner.And("I provide the following skills in skill field to search", ((string)(null)), table6, "And ");
 #line 34
  testRunner.And("I select \"Java Swing\" from the predective text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 35
- testRunner.Then("skill should not be duplicated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("skill should not be duplicated with count \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

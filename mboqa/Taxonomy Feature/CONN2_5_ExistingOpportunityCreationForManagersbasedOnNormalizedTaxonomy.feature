@@ -11,4 +11,4 @@ Scenario: CONN2_5_While editing an opprotunity A Manager/client should not be al
          | skills |
          | JAVA    |
 	And I select "Java" from the predective text
-	Then the new skill should be saved
+	Then the new skill "Java" should be saved

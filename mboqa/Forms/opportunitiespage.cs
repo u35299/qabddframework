@@ -88,6 +88,10 @@ namespace mboqa
         {
             get { return driver.FindElement(By.Id("mat-input-7")); }
         }
+        public static List<IWebElement> OpportunitySkillList
+        {
+            get { return driver.FindElements(By.CssSelector("#create-opportunity-skills > div > mat-form-field > div > div.mat-form-field-flex > div > mbo-chip-list >mat-chip-list > div>mbo-chip")).ToList(); }
+        }
         
     }
 }
