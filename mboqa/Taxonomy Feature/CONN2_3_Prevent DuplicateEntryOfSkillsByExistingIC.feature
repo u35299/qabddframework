@@ -10,7 +10,7 @@ Scenario: CONN2_3_Type ahead completion of skills based on normalized taxonomy f
 	And I Click on "Edit" button under skill
 	When I provide the following Duplicate skills in skill field to search
          | skills |
-         | java    |
+         | jav    |
    And I select "Java" from the predective text
    And I click the save button
    Then Duplicate skill should not be saved

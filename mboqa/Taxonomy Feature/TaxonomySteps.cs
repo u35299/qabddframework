@@ -285,6 +285,21 @@ namespace mboqa
             }
         }
 
+        [Then(@"new skill should be saved")]
+        public void ThenNewSkillShouldBeSaved()
+        {
+            try
+            {
+                Thread.Sleep(3000);
+                Profilepage.SaveSkills.Click();
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+
+        }
+
         [Then(@"Duplicate skill should not be saved")]
         public void ThenDuplicateSkillShouldNotBeSaved()
         {
@@ -314,6 +329,8 @@ namespace mboqa
             {
                 throw new System.Exception(ex.Message);
             }
+
+
 
         }
 

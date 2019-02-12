@@ -77,7 +77,7 @@ namespace mboqa
         {
 
             IJavaScriptExecutor js = (IJavaScriptExecutor)driver;
-            js.ExecuteScript("window.scrollBy(x,y)");
+            js.ExecuteScript("window.scrollBy(0,-700)");
 
 
         }

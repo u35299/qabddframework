@@ -89,5 +89,11 @@ namespace mboqa
 
         }
 
+        public static IWebElement SaveSkills
+        {
+            get { return driver.FindElement(By.XPath("//*[@id='profile - skills - form - save - button']/span")); }
+
+        }
+
     }
 }
