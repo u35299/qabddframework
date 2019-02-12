@@ -159,6 +159,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>CONN2_4_Visual color coding for any unrecognized skill in the existing profile.feature</DependentUpon>
     </Compile>
+    <Compile Include="Taxonomy Feature\CONN2_6_Prevent duplicate entry of skills in the New opportunity by Manager.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CONN2_6_Prevent duplicate entry of skills in the New opportunity by Manager.feature</DependentUpon>
+    </Compile>
     <Compile Include="Taxonomy Feature\CONN2_7_Preserve unrecognized historical skills.feature.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -222,6 +227,10 @@
     <None Include="Taxonomy Feature\CONN2_4_Visual color coding for any unrecognized skill in the existing profile.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
       <LastGenOutput>CONN2_4_Visual color coding for any unrecognized skill in the existing profile.feature.cs</LastGenOutput>
+    </None>
+    <None Include="Taxonomy Feature\CONN2_6_Prevent duplicate entry of skills in the New opportunity by Manager.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CONN2_6_Prevent duplicate entry of skills in the New opportunity by Manager.feature.cs</LastGenOutput>
     </None>
     <None Include="Taxonomy Feature\CONN2_7_Preserve unrecognized historical skills.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>
