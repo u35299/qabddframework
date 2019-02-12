@@ -88,12 +88,12 @@ namespace mboqa.TaxonomyFeature
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("Associate updates his/her skills")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("CONN2_7_Associate updates his/her skills")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Preserve unrecognized historical skills")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("taxonomy")]
-        public virtual void AssociateUpdatesHisHerSkills()
+        public virtual void CONN2_7_AssociateUpdatesHisHerSkills()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Associate updates his/her skills", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CONN2_7_Associate updates his/her skills", null, new string[] {
                         "taxonomy"});
 #line 4
 this.ScenarioInitialize(scenarioInfo);

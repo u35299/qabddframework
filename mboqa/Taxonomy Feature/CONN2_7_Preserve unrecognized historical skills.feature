@@ -1,7 +1,7 @@
 ﻿Feature: Preserve unrecognized historical skills
 # will fail due to BUG-CONN2-313
 @taxonomy
-Scenario: Associate updates his/her skills
+Scenario: CONN2_7_Associate updates his/her skills
 	Given Connect Application is loaded to login page in the browser
 	When I login to the application as an Advisor with the following credentials
 	| Username           | Password |
