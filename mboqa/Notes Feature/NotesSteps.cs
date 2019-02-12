@@ -274,9 +274,9 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
         {
             try
             {
-                Thread.Sleep(3000);
+                
                 wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("mat-option.mat-option.ng-star-inserted")));
-
+                Thread.Sleep(3000);
                 Notespage.PredectiveText.FirstOrDefault(x => x.Text == p0).Click();
             }
             catch (Exception ex)
