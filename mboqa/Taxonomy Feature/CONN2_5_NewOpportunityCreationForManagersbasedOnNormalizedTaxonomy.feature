@@ -1,7 +1,7 @@
-﻿Feature: Creating an opprotunity A Manager/client should not be allowed to add the skills
+﻿Feature: Creating an opprotunity A Manager/client should be allowed to add the skills
 
 @taxonomy
-Scenario: CONN2_5_While creating an opprotunity A Manager/client should not be allowed to add the skills
+Scenario: CONN2_5_While creating an opprotunity A Manager/client should be allowed to add the skills
 	Given Connect Application is loaded to login page in the browser
 	When I login to the application as an Advisor with the following credentials
 	| Username                       | Password |

@@ -18,7 +18,7 @@ namespace mboqa.TaxonomyFeature
     [System.CodeDom.Compiler.GeneratedCodeAttribute("TechTalk.SpecFlow", "2.4.0.0")]
     [System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     [Microsoft.VisualStudio.TestTools.UnitTesting.TestClassAttribute()]
-    public partial class CreatingAnOpprotunityAManagerClientShouldNotBeAllowedToAddTheSkillsFeature
+    public partial class CreatingAnOpprotunityAManagerClientShouldBeAllowedToAddTheSkillsFeature
     {
         
         private static TechTalk.SpecFlow.ITestRunner testRunner;
@@ -44,7 +44,7 @@ namespace mboqa.TaxonomyFeature
         public static void FeatureSetup(Microsoft.VisualStudio.TestTools.UnitTesting.TestContext testContext)
         {
             testRunner = TechTalk.SpecFlow.TestRunnerManager.GetTestRunner(null, 0);
-            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Creating an opprotunity A Manager/client should not be allowed to add the skills", null, ProgrammingLanguage.CSharp, ((string[])(null)));
+            TechTalk.SpecFlow.FeatureInfo featureInfo = new TechTalk.SpecFlow.FeatureInfo(new System.Globalization.CultureInfo("en-US"), "Creating an opprotunity A Manager/client should be allowed to add the skills", null, ProgrammingLanguage.CSharp, ((string[])(null)));
             testRunner.OnFeatureStart(featureInfo);
         }
         
@@ -59,9 +59,9 @@ namespace mboqa.TaxonomyFeature
         public virtual void TestInitialize()
         {
             if (((testRunner.FeatureContext != null) 
-                        && (testRunner.FeatureContext.FeatureInfo.Title != "Creating an opprotunity A Manager/client should not be allowed to add the skills")))
+                        && (testRunner.FeatureContext.FeatureInfo.Title != "Creating an opprotunity A Manager/client should be allowed to add the skills")))
             {
-                global::mboqa.TaxonomyFeature.CreatingAnOpprotunityAManagerClientShouldNotBeAllowedToAddTheSkillsFeature.FeatureSetup(null);
+                global::mboqa.TaxonomyFeature.CreatingAnOpprotunityAManagerClientShouldBeAllowedToAddTheSkillsFeature.FeatureSetup(null);
             }
         }
         
@@ -88,14 +88,14 @@ namespace mboqa.TaxonomyFeature
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("CONN2_5_While creating an opprotunity A Manager/client should not be allowed to a" +
-            "dd the skills")]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creating an opprotunity A Manager/client should not be allowed to add the skills")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("CONN2_5_While creating an opprotunity A Manager/client should be allowed to add t" +
+            "he skills")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Creating an opprotunity A Manager/client should be allowed to add the skills")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("taxonomy")]
-        public virtual void CONN2_5_WhileCreatingAnOpprotunityAManagerClientShouldNotBeAllowedToAddTheSkills()
+        public virtual void CONN2_5_WhileCreatingAnOpprotunityAManagerClientShouldBeAllowedToAddTheSkills()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CONN2_5_While creating an opprotunity A Manager/client should not be allowed to a" +
-                    "dd the skills", null, new string[] {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CONN2_5_While creating an opprotunity A Manager/client should be allowed to add t" +
+                    "he skills", null, new string[] {
                         "taxonomy"});
 #line 4
 this.ScenarioInitialize(scenarioInfo);
@@ -117,7 +117,7 @@ this.ScenarioInitialize(scenarioInfo);
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "skills"});
             table2.AddRow(new string[] {
-                        "JAVA"});
+                        "java 1.2"});
 #line 10
  testRunner.And("I provide the following skills in skill field to search", ((string)(null)), table2, "And ");
 #line 13

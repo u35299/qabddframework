@@ -122,7 +122,7 @@ this.ScenarioInitialize(scenarioInfo);
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "skills"});
             table2.AddRow(new string[] {
-                        "JAVA"});
+                        "JAV"});
 #line 11
  testRunner.And("I provide the following skills in skill field to search", ((string)(null)), table2, "And ");
 #line 14
