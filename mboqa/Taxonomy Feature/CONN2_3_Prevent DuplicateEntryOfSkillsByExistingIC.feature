@@ -8,6 +8,9 @@ Scenario: CONN2_3_Type ahead completion of skills based on normalized taxonomy f
 	| jleishman@mbo-tst.com            | Mbo.2011 |
 	And I Click "My Profile" from "My Account"
 	And I Click on "Edit" button under skill
-	And I provide the following skills in skill field to search
+	When I provide the following Duplicate skills in skill field to search
          | skills |
          | JAVA   |
+   And I select "Java" from the predective text
+   And I click the save button
+   Then Duplicate skill should not be saved

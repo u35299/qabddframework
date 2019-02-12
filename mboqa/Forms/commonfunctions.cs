@@ -13,7 +13,7 @@ namespace mboqa
     public class commonfunctions
     {
         WebDriverWait wait;
-        private readonly IWebDriver driver;
+        private static IWebDriver driver;
 
         public commonfunctions(IWebDriver _driver)
         {
