@@ -246,6 +246,7 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
             try
             {
                 Notespage.NotesSubmitButton.Click();
+                Thread.Sleep(3000);
             }
             catch (Exception ex)
             {
@@ -290,7 +291,7 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
             try
             {
                 wait.Until(ExpectedConditions.ElementExists(By.CssSelector("#mat-chip-list-0 > div > mat-form-field > div > div.mat-form-field-flex > div > input")));
-
+                Thread.Sleep(3000);
                 Opportunitiespage.SkillsTextbox.FirstOrDefault().SendKeys(table.Rows[0]["skills"].ToString());
                 
             }

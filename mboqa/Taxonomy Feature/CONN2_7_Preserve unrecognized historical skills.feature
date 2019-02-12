@@ -1,5 +1,5 @@
 ﻿Feature: Preserve unrecognized historical skills
-
+# will fail due to BUG-CONN2-313
 @taxonomy
 Scenario: Associate updates his/her skills
 	Given Connect Application is loaded to login page in the browser

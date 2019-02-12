@@ -57,6 +57,21 @@ namespace mboqa
 
         }
 
+        [When(@"I enter the following skills in the skills field")]
+        public void WhenIEnterTheFollowingSkillsInTheSkillsField(Table table)
+        {
+            try
+            {
+                Thread.Sleep(5000);
+                Opportunitiespage.OpportunitySkillTextbox.SendKeys(table.Rows[0]["skills"]);
+            }
+            catch (Exception ex)
+            {
+                throw new System.Exception(ex.Message);
+            }
+        }
+
+
         [Then(@"the error message ""(.*)"" should be displayed")]
         public void ThenTheErrorMessageShouldBeDisplayed(string p0)
         {
@@ -73,6 +88,13 @@ namespace mboqa
             }
 
         }
+
+        [Then(@"skill should not be duplicated")]
+        public void ThenSkillShouldNotBeDuplicated()
+        {
+            Assert.AreEqual(1, Profilepage.SkillSetinIcProfile.Count);
+        }
+
 
         [Then(@"skill should not be saved")]
         public void ThenSkillShouldNotBeSaved()
