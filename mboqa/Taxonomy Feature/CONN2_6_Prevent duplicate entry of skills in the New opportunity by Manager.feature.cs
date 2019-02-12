@@ -105,14 +105,80 @@ this.ScenarioInitialize(scenarioInfo);
                         "Username",
                         "Password"});
             table1.AddRow(new string[] {
-                        "anelson@mbo-tst.com",
-                        "Mbo.2011"});
+                        "jpiazza@mbo-tst.com",
+                        "Mbo.2015"});
 #line 6
  testRunner.When("I login to the application as an Advisor with the following credentials", ((string)(null)), table1, "When ");
 #line 9
- testRunner.And("I Click \"My Profile\" from \"My Account\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I click \"Create New Opportunity\" menu", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
+                        "skills"});
+            table2.AddRow(new string[] {
+                        "java"});
 #line 10
- testRunner.Then("the result should be 120 on the screen", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.And("I enter the following skills in the skills field", ((string)(null)), table2, "And ");
+#line 13
+ testRunner.And("I select \"Java Swing\" from the predective text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table3 = new TechTalk.SpecFlow.Table(new string[] {
+                        "skills"});
+            table3.AddRow(new string[] {
+                        "java"});
+#line 14
+ testRunner.And("I enter the following skills in the skills field", ((string)(null)), table3, "And ");
+#line 17
+ testRunner.And("I select \"Java Swing\" from the predective text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 18
+ testRunner.Then("skill should not be duplicated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            this.ScenarioCleanup();
+        }
+        
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("CONN2_6_Manager should not be able to enter duplicate skills in the skills field " +
+            "for Existing opportunity creation")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "CONN2_6_Prevent duplicate entry of skills in the New opportunity by Manager")]
+        public virtual void CONN2_6_ManagerShouldNotBeAbleToEnterDuplicateSkillsInTheSkillsFieldForExistingOpportunityCreation()
+        {
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("CONN2_6_Manager should not be able to enter duplicate skills in the skills field " +
+                    "for Existing opportunity creation", null, ((string[])(null)));
+#line 20
+ this.ScenarioInitialize(scenarioInfo);
+            this.ScenarioStart();
+#line 22
+ testRunner.Given("Connect Application is loaded to login page in the browser", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+#line hidden
+            TechTalk.SpecFlow.Table table4 = new TechTalk.SpecFlow.Table(new string[] {
+                        "Username",
+                        "Password"});
+            table4.AddRow(new string[] {
+                        "dcooke@mbo-tst.com",
+                        "Mbo.2015"});
+#line 23
+ testRunner.When("I login to the application as an Advisor with the following credentials", ((string)(null)), table4, "When ");
+#line 26
+ testRunner.And("I click on Edit button one of the opportunity", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table5 = new TechTalk.SpecFlow.Table(new string[] {
+                        "skills"});
+            table5.AddRow(new string[] {
+                        "java"});
+#line 27
+ testRunner.And("I provide the following skills in skill field to search", ((string)(null)), table5, "And ");
+#line 30
+ testRunner.And("I select \"Java Swing\" from the predective text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line hidden
+            TechTalk.SpecFlow.Table table6 = new TechTalk.SpecFlow.Table(new string[] {
+                        "skills"});
+            table6.AddRow(new string[] {
+                        "javas"});
+#line 31
+ testRunner.And("I provide the following skills in skill field to search", ((string)(null)), table6, "And ");
+#line 34
+ testRunner.And("I select \"Java Swing\" from the predective text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 35
+ testRunner.Then("skill should not be duplicated", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

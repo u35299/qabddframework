@@ -33,7 +33,7 @@ namespace mboqa
         public void RunBeforeScenario()
         {            
             ChromeOptions options = new ChromeOptions();
-            driver = new ChromeDriver(@"C:\Users\u62802\Source\Repos\qabddframework\mboqa\chromedriver", options);
+            driver = new ChromeDriver(@"D:\MBOAutomation\chromedriver\", options);
 
             _objectContainer.RegisterInstanceAs<IWebDriver>(driver);
             scenario = featureName.CreateNode<Scenario>(ScenarioContext.Current.ScenarioInfo.Title);
@@ -55,7 +55,7 @@ namespace mboqa
         [BeforeTestRun]
         public static void initializeReport()
         {
-            string Reportpath = @"C:\Users\u62802\Source\Repos\qabddframework\mboqa\Reports\";
+            string Reportpath = @"D:\MBOAutomation\Reports\";
             var htmlReporter = new ExtentHtmlReporter(Reportpath);
             htmlReporter.Config.Theme = AventStack.ExtentReports.Reporter.Configuration.Theme.Dark;
             extent = new ExtentReports();

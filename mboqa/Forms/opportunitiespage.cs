@@ -84,7 +84,10 @@ namespace mboqa
         {
             get { return driver.FindElement(By.Id("talent-search-basic-name-form-field")); }
         }
-
+        public static IWebElement OpportunitySkillTextbox
+        {
+            get { return driver.FindElement(By.Id("mat-input-7")); }
+        }
         
     }
 }
