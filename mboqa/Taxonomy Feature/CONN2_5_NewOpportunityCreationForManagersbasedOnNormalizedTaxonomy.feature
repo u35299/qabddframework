@@ -10,5 +10,5 @@ Scenario: CONN2_5_While creating an opprotunity A Manager/client should not be a
 	And I provide the following skills in skill field to search
          | skills |
          | JAVA   |
-	And I select "JAVA" from the predective text
+	And I select "java" from the predective text
 	Then the new skill should be saved

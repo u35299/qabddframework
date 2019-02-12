@@ -122,11 +122,11 @@ this.ScenarioInitialize(scenarioInfo);
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "skills"});
             table2.AddRow(new string[] {
-                        "JAVA"});
+                        "JAVA 1.2"});
 #line 11
  testRunner.And("I provide the following skills in skill field to search", ((string)(null)), table2, "And ");
 #line 14
-    testRunner.And("I select \"JAVA\" from the predective text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+    testRunner.And("I select \"JAVA 1.2\" from the predective text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
     testRunner.Then("the new skill should be saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden

@@ -48,8 +48,9 @@ namespace mboqa.Company_Homepage_Feature
         {
             //driver.Navigate().GoToUrl("http://localhost:4200/client/salesforce");
             driver.Navigate().GoToUrl("http://connect-qa.mbopartners.com/client/salesforce");
+            wait.Until(ExpectedConditions.ElementIsVisible(By.XPath("//div[@class='signup-form-white']")));
         }
-
+        
         [Then(@"I validate the presence of FirstName, LastName, Email-Address fields")]
         public void ThenIValidateThePresenceOfFirstNameLastNameEmail_AddressFields()
         {

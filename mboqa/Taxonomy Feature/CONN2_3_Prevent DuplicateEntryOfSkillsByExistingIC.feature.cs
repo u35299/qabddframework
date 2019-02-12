@@ -119,7 +119,7 @@ this.ScenarioInitialize(scenarioInfo);
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
                         "skills"});
             table2.AddRow(new string[] {
-                        "JAVA"});
+                        "java"});
 #line 11
  testRunner.When("I provide the following Duplicate skills in skill field to search", ((string)(null)), table2, "When ");
 #line 14

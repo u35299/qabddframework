@@ -224,9 +224,10 @@ namespace mboqa
         {
             try
             {
+                Thread.Sleep(3000);
                 //List<IWebElement> SkillSet = driver.FindElements(By.CssSelector("#profile-skills-chip > mat-chip-list > div >mbo-chip")).ToList();
 
-                Assert.IsTrue(Profilepage.SkillSet.Any(x => x.Text == "JAVA"));
+                Assert.IsTrue(Profilepage.SkillSet.Any(x => x.Text == "java"));
             }
             catch (Exception ex)
             {
@@ -254,6 +255,7 @@ namespace mboqa
                 wait.Until(ExpectedConditions.ElementExists(By.CssSelector("#mat-chip-list-0 > div > mat-form-field > div > div.mat-form-field-flex > div > input")));
 
                 Opportunitiespage.SkillsTextbox.FirstOrDefault().SendKeys(table.Rows[0]["skills"].ToString());
+                
             }
             catch (Exception ex)
             {
@@ -266,9 +268,25 @@ namespace mboqa
         {
             try
             {
-                String SkillName = Profilepage.addedSkill.Text;
+                int count;
+                List<string> AuthorList = new List<string>();
+                List<IWebElement> SkillName = driver.FindElements(By.XPath("//mat-chip[contains(@id,'profile-skills-chip')]")).ToList();
+                foreach (IWebElement Skill in SkillName)
+                   {
+                    String SkillText = Skill.Text;
 
-            Assert.AreEqual(SkillName, "Java");
+                    if(SkillText == "java")
+                    {
+                        
+                        AuthorList.Add("java");
+                                               
+                    }
+                   
+                }
+
+                count = AuthorList.Count;
+                Assert.IsTrue(count==1, "Duplicate has been added");
+
             }
             catch (Exception ex)
             {

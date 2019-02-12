@@ -83,9 +83,9 @@ namespace mboqa
             
         }
 
-        public static IWebElement SkillChip
+        public static List<IWebElement> SkillChips
         {
-            get { return driver.FindElement(By.XPath()); }
+            get { return driver.FindElements(By.XPath("//mat-chip[contains(@id,'profile-skills-chip')]")).ToList(); }
 
         }
 

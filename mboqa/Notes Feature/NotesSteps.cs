@@ -292,6 +292,7 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
                 wait.Until(ExpectedConditions.ElementExists(By.CssSelector("#mat-chip-list-0 > div > mat-form-field > div > div.mat-form-field-flex > div > input")));
 
                 Opportunitiespage.SkillsTextbox.FirstOrDefault().SendKeys(table.Rows[0]["skills"].ToString());
+                
             }
             catch (Exception ex)
             {
