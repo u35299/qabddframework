@@ -249,7 +249,7 @@ namespace mboqa
                 Thread.Sleep(3000);
                 //List<IWebElement> SkillSet = driver.FindElements(By.CssSelector("#profile-skills-chip > mat-chip-list > div >mbo-chip")).ToList();
 
-                Assert.IsTrue(Profilepage.SkillSet.Any(x => x.Text == "java"));
+                Assert.IsTrue(Profilepage.SkillSet.Any(x => x.Text == "Java"));
             }
             catch (Exception ex)
             {
@@ -262,7 +262,12 @@ namespace mboqa
         public void WhenIClickedInSkillsSection_()
         {
             Thread.Sleep(3000);
-            commonfunctions.ScrollPageUp(0,-700);
+
+            Actions actions = new Actions(driver);
+            actions.MoveToElement(driver.FindElement(By.Id("registration-summary-form-field"))).Perform();
+
+            //commonfunctions.ScrollPageUp(0,-700);
+            //"mbo-chip-list.form__chip-list>mat-chip-list.chip__list.mat-chip-list>div>mat-form-field>div>div.mat-form-field-flex>div.mat-form-field-infix>input"
             wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#registration-skill > div > mat-form-field > div > div.mat-form-field-flex > div > mbo-chip-list")));
             Thread.Sleep(3000);
             Profilepage.NewRegistration_SkillsSection.Click();

@@ -93,8 +93,10 @@ namespace mboqa.Company_Homepage_Feature
             Assert.AreEqual(Salesforcehomepage.ConfirmationMessage.Text, "Thank you!");
         }
 
-
-
-
+        [Then(@"the new skill ""(.*)"" should be saved in the Registration page skillset")]
+        public void ThenTheNewSkillShouldBeSavedInTheRegistrationPageSkillset(string p0)
+        {
+            Assert.IsTrue(Profilepage.RegistrationpageSkillChips.Any(x => x.Text == p0));
+        }
     }
 }

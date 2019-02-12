@@ -42,8 +42,11 @@ namespace mboqa
         public static IWebElement ConfirmationMessage
         {
             get { return driver.FindElement(By.XPath("//h1[@class='display-4']")); }
-        }        
+        }
 
-
+        public static IWebElement RegisterationpageSkillbox
+        {
+            get { return driver.FindElement(By.CssSelector("mbo-chip-list.form__chip-list>mat-chip-list.chip__list.mat-chip-list>div>mat-form-field>div>div.mat-form-field-flex>div.mat-form-field-infix>input")); }
+        }                  
     }
 }

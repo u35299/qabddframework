@@ -95,5 +95,10 @@ namespace mboqa
 
         }
 
+        public static List<IWebElement> RegistrationpageSkillChips
+        {
+            get { return driver.FindElements(By.CssSelector("#registration-skill > div > mat-form-field > div > div.mat-form-field-flex > div > mbo-chip-list > mat-chip-list >div>mbo-chip")).ToList(); }
+
+        }      
     }
 }
