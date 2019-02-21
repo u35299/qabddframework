@@ -147,12 +147,14 @@ namespace mboqa
             {
                 // my profile from my account
                 wait.Until(ExpectedConditions.ElementIsVisible(By.Id("myAccountLink")));
-                //List<IWebElement> MyAccount = driver.FindElements(By.Id("myAccountLink")).ToList();
-                Opportunitiespage.MyAccount.FirstOrDefault().Click();
+                List<IWebElement> MyAccount = driver.FindElements(By.Id("myAccountLink")).ToList();
+                //Opportunitiespage.MyAccount.FirstOrDefault().Click();
+                MyAccount.FirstOrDefault().Click();
 
                 wait.Until(ExpectedConditions.ElementIsVisible(By.Id("profileLink")));
-                //List<IWebElement> MyProfile = driver.FindElements(By.Id("profileLink")).ToList();
-                Opportunitiespage.MyProfile.FirstOrDefault().Click();
+                List<IWebElement> MyProfile = driver.FindElements(By.Id("profileLink")).ToList();
+                //Opportunitiespage.MyProfile.FirstOrDefault().Click();
+                MyProfile.FirstOrDefault().Click();
             }
             catch (Exception ex)
             {
@@ -221,6 +223,10 @@ namespace mboqa
             try
             {
                 wait.Until(ExpectedConditions.ElementIsVisible(By.Id("profile-skills-form-save-button")));
+                if (driver.FindElements(By.Id("profile-experience-description-5")).Count>0)
+                    commonfunctions.MovetoElement("Id", "profile-experience-description-5");
+                else
+                    commonfunctions.MovetoElement("Id", "profile-skills-form-save-button");
                 //List<IWebElement> SaveSkill = driver.FindElements(By.Id("profile-skills-form-save-button")).ToList();
                 Profilepage.SaveSkill.FirstOrDefault().Click();
             }
@@ -256,7 +262,7 @@ namespace mboqa
                 Thread.Sleep(3000);
                 //List<IWebElement> SkillSet = driver.FindElements(By.CssSelector("#profile-skills-chip > mat-chip-list > div >mbo-chip")).ToList();
 
-                Assert.IsTrue(Profilepage.SkillSet.Any(x => x.Text == "Java"));
+                Assert.IsTrue(Profilepage.SkillSet.Any(x => x.Text == "java"));
             }
             catch (Exception ex)
             {

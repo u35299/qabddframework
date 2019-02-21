@@ -114,8 +114,10 @@ this.ScenarioInitialize(scenarioInfo);
 #line 10
  testRunner.And("I search for \"Senior DevOps EngineerII\" in the opportunity search bar", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 11
- testRunner.And("I Click on the first profile from the the search result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I Click on \"2\" opportunity from the opportunity list", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 12
+ testRunner.And("I Click on the first profile from the the search result", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 13
  testRunner.And("I click on \"Add Message\" from the profile page to enter a message", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             TechTalk.SpecFlow.Table table2 = new TechTalk.SpecFlow.Table(new string[] {
@@ -126,7 +128,7 @@ this.ScenarioInitialize(scenarioInfo);
                         "Date and Time"});
             table2.AddRow(new string[] {
                         "Message"});
-#line 13
+#line 14
  testRunner.Then("the notes window should be displayed with the following fields", ((string)(null)), table2, "Then ");
 #line hidden
             this.ScenarioCleanup();

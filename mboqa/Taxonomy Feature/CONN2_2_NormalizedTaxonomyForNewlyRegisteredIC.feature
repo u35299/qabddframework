@@ -12,4 +12,3 @@ Scenario: CONN2_2_Type ahead completion of skills based on normalized taxonomy f
          | JAVA  |
     And I select "Java" from the predective text
 	Then the new skill "Java" should be saved in the Registration page skillset
-	 

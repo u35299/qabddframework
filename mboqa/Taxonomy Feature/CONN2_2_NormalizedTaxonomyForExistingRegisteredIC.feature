@@ -12,5 +12,6 @@ Scenario: CONN2_2_Type ahead completion of skills based on normalized taxonomy f
          | skills |
          | JAVA   |
     And I select "Java" from the predective text
+	And I click the save button
     Then the new skill should be saved
 	

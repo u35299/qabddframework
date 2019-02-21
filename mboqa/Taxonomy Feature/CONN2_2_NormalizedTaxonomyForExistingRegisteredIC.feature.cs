@@ -128,6 +128,8 @@ this.ScenarioInitialize(scenarioInfo);
 #line 14
     testRunner.And("I select \"Java\" from the predective text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 15
+ testRunner.And("I click the save button", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+#line 16
     testRunner.Then("the new skill should be saved", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();

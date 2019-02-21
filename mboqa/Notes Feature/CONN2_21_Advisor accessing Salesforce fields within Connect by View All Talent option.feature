@@ -8,7 +8,8 @@ Scenario: CONN2_21_Advisor accessing Salesforce fields within Connect by View Al
 	| Username          | Password |
 	| tberg@mbo-tst.com | Mbo.2011 |
 	And I search for "Senior DevOps EngineerII" in the opportunity search bar
-	And I Click on the first profile from the the search result
+	And I Click on "2" opportunity from the opportunity list
+	And I Click on the first profile from the the search result	
 	And I click on "Add Message" from the profile page to enter a message
 	Then the notes window should be displayed with the following fields
 	| Fields        |

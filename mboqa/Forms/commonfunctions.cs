@@ -91,8 +91,17 @@ namespace mboqa
 
         }
 
+        public static void MovetoElement (string findBy, string idTofind)
+        {
+            Actions actions = new Actions(driver);
 
-
+            if (findBy == "Id")
+                actions.MoveToElement(driver.FindElement(By.Id(idTofind))).Perform();
+            else if (findBy == "CssSelector")
+                actions.MoveToElement(driver.FindElement(By.CssSelector(idTofind))).Perform();
+            else if (findBy == "XPath")
+                actions.MoveToElement(driver.FindElement(By.XPath(idTofind))).Perform();
+        }
     }
 
 }

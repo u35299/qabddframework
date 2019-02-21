@@ -178,7 +178,7 @@ this.ScenarioInitialize(scenarioInfo);
 #line 34
  testRunner.And("I select \"Java Swing\" from the predective text", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 35
- testRunner.Then("skill should not be duplicated with count \"2\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then("skill should not be duplicated with count \"3\"", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             this.ScenarioCleanup();
         }

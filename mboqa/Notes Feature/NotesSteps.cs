@@ -184,7 +184,15 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
             Opportunitiespage.OpportunitySearchResponseList.FirstOrDefault().Click();
         }
 
-        [When(@"I provide the following name to search by name")]
+        [When(@"I Click on ""(.*)"" opportunity from the opportunity list")]
+        public void WhenIClickOnOpportunityFromTheOpportunityList(int p0)
+        {
+            Opportunitiespage.OpportunityList[p0-1].Click();
+
+        }
+
+
+    [When(@"I provide the following name to search by name")]
         public void WhenIProvideTheFollowingNameToSearchByName(Table table)
         {
             Opportunitiespage.OpportunitySearchByNameTextbox.SendKeys(table.Rows[0]["name"]);
