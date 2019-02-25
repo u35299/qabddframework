@@ -281,13 +281,9 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
         public void WhenISelectFromThePredectiveText(string p0)
         {
             try
-            {
-                
+            {                
                 wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("mat-option.mat-option.ng-star-inserted")));
                 
-               // IList<IWebElement> value = driver.FindElements(By.XPath("//mat-option[contains(@id,'mat-option')]")).ToList();
-               // foreach(IWebElement ValueOne in value)
-               // 
                 Notespage.PredectiveText.FirstOrDefault(x => x.Text == p0).Click();
                 Thread.Sleep(3000);
             }

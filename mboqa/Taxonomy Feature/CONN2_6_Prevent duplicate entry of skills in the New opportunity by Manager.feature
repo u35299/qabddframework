@@ -32,4 +32,4 @@ Scenario: CONN2_6_Prevent duplicate entry of skills in the New opportunity by Ma
          | skills |
          | jav   |
 	And I select "Java Swing" from the predective text
-	Then skill should not be duplicated with count "3"
+	Then skill should not be duplicated with count "2"

@@ -46,8 +46,6 @@ namespace mboqa
             try
             {
                 wait.Until(ExpectedConditions.ElementIsVisible(By.Id("createOpportunityLink")));
-
-                //List<IWebElement> CreateOpportunityLink = driver.FindElements(By.Id("createOpportunityLink")).ToList();
                 Opportunitiespage.CreateOpportunityLink.FirstOrDefault().Click();
             }
             catch (Exception ex)
@@ -78,8 +76,6 @@ namespace mboqa
             try
             {
                 wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("mat-hint.mat-hint.ng-star-inserted")));
-                //List<IWebElement> TaxonomyErrorMsg = driver.FindElements(By.CssSelector("mat-hint.mat-hint.ng-star-inserted")).ToList();
-
                 Assert.AreEqual(Profilepage.TaxonomyErrorMsg.FirstOrDefault().Text, p0);
             }
             catch (Exception ex)
@@ -107,10 +103,7 @@ namespace mboqa
         public void ThenSkillShouldNotBeSaved()
         {
             try
-            {
-
-                //List<IWebElement> PredectiveText = driver.FindElements(By.CssSelector("mat-option.mat-option.ng-star-inserted")).ToList();                
-                
+            {                
                 Assert.AreEqual(0, Notespage.PredectiveText.Count);
             }
             catch (Exception ex)
@@ -126,11 +119,6 @@ namespace mboqa
             try
             {
                 wait.Until(ExpectedConditions.ElementIsVisible(By.Id("opportunityListScrollWrapper")));
-
-                //List<IWebElement> OpportunityList = driver.FindElements(By.CssSelector("#opportunityListScrollWrapper > div")).ToList();
-
-                //IWebElement EditButtonofFirstOpportunity = OpportunityList.FirstOrDefault().FindElements(By.TagName("Button")).Where(x => x.Text == "Edit").FirstOrDefault();
-
                 Opportunitiespage.EditButtonofFirstOpportunity.Click();
             }
             catch (Exception ex)
@@ -170,8 +158,6 @@ namespace mboqa
             {
                 wait.Until(ExpectedConditions.ElementIsVisible(By.Id("profile-skills-form-edit-button")));
 
-                //List<IWebElement> EditSkill = driver.FindElements(By.Id("profile-skills-form-edit-button")).ToList();
-                //commonfunctions.ScrollPageDown(0,1000);
                 Actions actions = new Actions(driver);
                 actions.MoveToElement(driver.FindElement(By.Id("profile-education-form-edit-button"))).Perform();
                 Profilepage.EditSkill.FirstOrDefault().Click();
@@ -187,10 +173,6 @@ namespace mboqa
         {
             try
             {
-                //wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#profile-skills-chip>mat-chip-list>div>mbo-chip")));
-
-                int y= Profilepage.SkillSetinIcProfile.Count();
-
                 Assert.IsTrue(Profilepage.SkillSetinIcProfile.Any(x => x.FindElement(By.CssSelector("mat-chip.chip__list-item.chip-standard.chip-input.chip-with-icon.mat-chip.mat-standard-chip.legacy-skill.mat-none")).Displayed));
             }
 
@@ -207,7 +189,6 @@ namespace mboqa
             try
             {
                 wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#mat-chip-list-0 > div > mat-form-field > div > div.mat-form-field-flex > div > input")));
-                //List<IWebElement> SkillTextBox = driver.FindElements(By.CssSelector("#mat-chip-list-0 > div > mat-form-field > div > div.mat-form-field-flex > div > input")).ToList();
                 Profilepage.SkillTextBox.FirstOrDefault().SendKeys(table.Rows[0]["skills"]);
             }
             catch (Exception ex)
@@ -227,14 +208,12 @@ namespace mboqa
                     commonfunctions.MovetoElement("Id", "profile-experience-description-5");
                 else
                     commonfunctions.MovetoElement("Id", "profile-skills-form-save-button");
-                //List<IWebElement> SaveSkill = driver.FindElements(By.Id("profile-skills-form-save-button")).ToList();
                 Profilepage.SaveSkill.FirstOrDefault().Click();
             }
             catch (Exception ex)
             {
                 throw new System.Exception(ex.Message);
             }
-
         }
 
 
@@ -243,8 +222,6 @@ namespace mboqa
         {
             try
             {                
-                //List<IWebElement> SkillSet = driver.FindElements(By.CssSelector("#profile-skills-chip > mat-chip-list > div >mbo-chip")).ToList();
-
                 Assert.IsTrue(Profilepage.SkillSet.Any(x => x.Text != "JAVA"));
             }
             catch (Exception ex)
@@ -260,8 +237,6 @@ namespace mboqa
             try
             {
                 Thread.Sleep(3000);
-                //List<IWebElement> SkillSet = driver.FindElements(By.CssSelector("#profile-skills-chip > mat-chip-list > div >mbo-chip")).ToList();
-
                 Assert.IsTrue(Profilepage.SkillSet.Any(x => x.Text == "java"));
             }
             catch (Exception ex)
@@ -295,8 +270,6 @@ namespace mboqa
             Actions actions = new Actions(driver);
             actions.MoveToElement(driver.FindElement(By.Id("registration-summary-form-field"))).Perform();
 
-            //commonfunctions.ScrollPageUp(0,-700);
-            //"mbo-chip-list.form__chip-list>mat-chip-list.chip__list.mat-chip-list>div>mat-form-field>div>div.mat-form-field-flex>div.mat-form-field-infix>input"
             wait.Until(ExpectedConditions.ElementIsVisible(By.CssSelector("#registration-skill > div > mat-form-field > div > div.mat-form-field-flex > div > mbo-chip-list")));
             Thread.Sleep(3000);
             Profilepage.NewRegistration_SkillsSection.Click();
@@ -351,8 +324,7 @@ namespace mboqa
                         
                         AuthorList.Add("java");
                                                
-                    }
-                   
+                    }                   
                 }
 
                 count = AuthorList.Count;
@@ -363,12 +335,6 @@ namespace mboqa
             {
                 throw new System.Exception(ex.Message);
             }
-
-
-
         }
-
-
-
     }
 }

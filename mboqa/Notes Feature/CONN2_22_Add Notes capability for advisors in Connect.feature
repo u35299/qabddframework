@@ -27,7 +27,7 @@ Scenario: CONN2_22_Advisor accessing Salesforce fields within Connect by Talent 
 	| Username          | Password |
 	| tberg@mbo-tst.com | Mbo.2011 |
 	And I search for "Senior DevOps EngineerII" in the opportunity search bar
-	And I Click on "2" opportunity from the opportunity list
+	And I Click on "3" opportunity from the opportunity list
 	And I Click on the first profile from the the search result	
 	And I click on "Add Message" from the profile page to enter a message
 	And I enter the message in the message box
