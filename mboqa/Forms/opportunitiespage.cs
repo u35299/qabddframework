@@ -92,6 +92,14 @@ namespace mboqa
         {
             get { return driver.FindElements(By.CssSelector("#create-opportunity-skills > div > mat-form-field > div > div.mat-form-field-flex > div > mbo-chip-list >mat-chip-list > div>mbo-chip")).ToList(); }
         }
+        public static IWebElement OpportunityMenuLink
+        {
+            get { return driver.FindElement(By.Id("opportunitiesLink")); }
+        }
+        public static IWebElement AdvisorAssignmentLink
+        {
+            get { return driver.FindElement(By.Id("advisorAssignmentLink")); }
+        }
         
     }
 }

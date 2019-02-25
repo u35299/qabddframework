@@ -41,8 +41,8 @@ namespace mboqa
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
             driver.Manage().Timeouts().PageLoad = TimeSpan.FromSeconds(20);
             driver.Manage().Window.Maximize();
+            driver.Navigate().GoToUrl("https://connect-qa.mbopartners.com");
             ScenarioContext.Current.Add("currentDriver", driver);
-
             
         }
 

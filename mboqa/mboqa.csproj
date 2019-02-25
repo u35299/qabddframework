@@ -92,6 +92,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Advisor Assignment Feature\AdvisorAssignmentSteps.cs" />
+    <Compile Include="Advisor Assignment Feature\CONN2_26_An Advisor reviews all the Opportunities assigned to her.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CONN2_26_An Advisor reviews all the Opportunities assigned to her.feature</DependentUpon>
+    </Compile>
     <Compile Include="Company Homepage Feature\CompanyHomepageSteps.cs" />
     <Compile Include="Company Homepage Feature\Perform user signup in Company Homepage.feature.cs">
       <AutoGen>True</AutoGen>
@@ -182,6 +188,10 @@
     <Compile Include="Taxonomy Feature\TaxonomySteps.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Advisor Assignment Feature\CONN2_26_An Advisor reviews all the Opportunities assigned to her.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CONN2_26_An Advisor reviews all the Opportunities assigned to her.feature.cs</LastGenOutput>
+    </None>
     <None Include="App.config" />
     <None Include="Company Homepage Feature\Perform user signup in Company Homepage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

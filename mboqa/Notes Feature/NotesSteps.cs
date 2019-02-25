@@ -49,10 +49,10 @@ namespace mboqa.Notes_Feature.Add_Notes_capability_for_advisors_in_Connect
             try
             {
 
-                driver.Navigate().GoToUrl("https://connect-qa.mbopartners.com");
-                //driver.Navigate().GoToUrl("http://localhost:4200");
-                Thread.Sleep(5000);
-                objcommonfunctions.waituntillElementExist("Id", "username");
+                //driver.Navigate().GoToUrl("https://connect-qa.mbopartners.com");
+                ////driver.Navigate().GoToUrl("http://localhost:4200");
+                //Thread.Sleep(5000);
+                //objcommonfunctions.waituntillElementExist("Id", "username");
             }
             catch (Exception ex)
             {
