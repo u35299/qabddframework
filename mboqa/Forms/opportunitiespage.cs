@@ -193,7 +193,6 @@ namespace mboqa
             get { return driver.FindElement(By.XPath("//span[contains(text(),'Cancel')]")); }
 
         }
-    }
 
         public static IWebElement OpportunityMenuLink
         {
@@ -202,7 +201,6 @@ namespace mboqa
         public static IWebElement AdvisorAssignmentLink
         {
             get { return driver.FindElement(By.Id("advisorAssignmentLink")); }
-        }
-        
+        }        
     }
 }
