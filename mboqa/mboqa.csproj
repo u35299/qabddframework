@@ -92,6 +92,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdvisorAssignment\CreateOpportunity.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CreateOpportunity.feature</DependentUpon>
+    </Compile>
+    <Compile Include="AdvisorAssignment\Opportunity.cs" />
     <Compile Include="Company Homepage Feature\CompanyHomepageSteps.cs" />
     <Compile Include="Company Homepage Feature\Perform user signup in Company Homepage.feature.cs">
       <AutoGen>True</AutoGen>
@@ -182,6 +188,10 @@
     <Compile Include="Taxonomy Feature\TaxonomySteps.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="AdvisorAssignment\CreateOpportunity.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>CreateOpportunity.feature.cs</LastGenOutput>
+    </None>
     <None Include="App.config" />
     <None Include="Company Homepage Feature\Perform user signup in Company Homepage.feature">
       <Generator>SpecFlowSingleFileGenerator</Generator>

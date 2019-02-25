@@ -92,6 +92,107 @@ namespace mboqa
         {
             get { return driver.FindElements(By.CssSelector("#create-opportunity-skills > div > mat-form-field > div > div.mat-form-field-flex > div > mbo-chip-list >mat-chip-list > div>mbo-chip")).ToList(); }
         }
+
+        public static IWebElement Title
+        {
+            get { return driver.FindElement(By.CssSelector("#create-opportunity-title-form-field")); }
+        }
+
+        public static IWebElement JobID
+        {
+            get { return driver.FindElement(By.CssSelector("#create-opportunity-job-id-form-field")); }
+
+        }
+
+        public static IWebElement StartDate
+        {
+            get { return driver.FindElement(By.CssSelector("#create-opportunity-date-range-start-date-picker-input")); }
+
+        }
+
+        public static IWebElement EndDate
+        {
+            get { return driver.FindElement(By.CssSelector("#create-opportunity-date-range-end-date-picker-input")); }
+
+        }
+
+        public static IWebElement Street
+        {
+            get { return driver.FindElement(By.XPath("//*[@id='create - opportunity - address']/div/address-form-v2/div/div[1]/text-form-field/div/mat-form-field/div/div[1]/div")); }
+
+        }
+
+        public static IWebElement City
+        {
+            get { return driver.FindElement(By.XPath("//*[@id='create - opportunity - address']/div/address-form-v2/div/div[2]/text-form-field/div/mat-form-field/div/div[1]/div")); }
+
+        }
+
+        public static IWebElement ZipCode
+        {
+            get { return driver.FindElement(By.XPath("//*[@id='create - opportunity - address']/div/address-form-v2/div/div[4]/zip-code-form-field/div/mat-form-field/div/div[1]/div")); }
+
+        }
         
+        public static IWebElement Description
+        {
+            get { return driver.FindElement(By.XPath("//div[@class='ql-editor ql-blank']")); }
+
+        }
+
+        public static IWebElement MinimumCharge
+        {
+            get { return driver.FindElement(By.CssSelector("#create-opportunity-budget-range-min")); }
+
+        }
+
+        public static IWebElement MaximumCharge
+        {
+            get { return driver.FindElement(By.CssSelector("#create-opportunity-budget-range-max")); }
+
+        }
+
+        public static IWebElement AdvisoryNeeded_Yes
+        {
+            get { return driver.FindElement(By.CssSelector("#is-help-note-is-help-required-1-form-field > label > div.mat-radio-label-content > span.form__radio-button-label")); }
+
+        }
+
+        public static IWebElement AdvisoryNeeded_No
+        { 
+            get { return driver.FindElement(By.CssSelector("#is-help-note-is-help-required-0-form-field > label > div.mat-radio-container > div.mat-radio-outer-circle")); }
+
+        }
+        
+        public static IWebElement RemoteWork_No
+        {
+            get { return driver.FindElement(By.XPath("//*[@id='create - opportunity - address - remote - work - 0 - form - field']/label/div[1]/div[1]")); }
+
+        }
+
+        public static IWebElement RemoteWork_Yes
+        {
+            get { return driver.FindElement(By.CssSelector("#create-opportunity-address-remote-work-1-form-field > label > div.mat-radio-container > div.mat-radio-outer-circle")); }
+
+        }
+
+        public static IWebElement Publish_btn
+        {
+            get { return driver.FindElement(By.CssSelector("#opportunityCreateForm > div > button.btn.btn__primary.btn-lg.mat-raised-button.mat-primary.stateful-init.ng-star-inserted")); }
+
+        }
+        
+        public static IWebElement Save_btn
+        {
+            get { return driver.FindElement(By.XPath("//button[@id='create-opportunity-save-button']")); }
+
+        }
+
+        public static IWebElement Cancel_Link
+        {
+            get { return driver.FindElement(By.XPath("//span[contains(text(),'Cancel')]")); }
+
+        }
     }
+
 }
