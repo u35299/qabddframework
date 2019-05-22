@@ -33,6 +33,7 @@ namespace mboqa
         public void RunBeforeScenario()
         {            
             ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--headless");
             driver = new ChromeDriver(@"D:\MBOAutomation\chromedriver\", options);
 
             _objectContainer.RegisterInstanceAs<IWebDriver>(driver);
